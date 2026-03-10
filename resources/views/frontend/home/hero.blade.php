@@ -1,51 +1,83 @@
-
-
-
-
-
-  <section class="tf-slider-2">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="slider-2">
-                    <div class="themesflat-carousel clearfix" data-margin="30" data-item="1" data-item2="1" data-item3="1" data-item4="1" data-auto="false">
-                        <div class="owl-carousel owl-theme none dots-none">
-                            <div class="item-slider-2">
-                                <div class="box-content">
-                                    <div class="sub f-rubik clr-pri-3">Proudly Sri Lankan</div>
-                                    <div class="title clr-pri-2">Nourishing Little Ones with Love</div>
-                                    <p class="wrap f-rubik">At Aromat, we bring affordable, nutritious baby food to every Sri Lankan family. As parents, we solved the struggle for safe, wholesome meals — now premium nutrition is accessible to all.</p>
-                                    <div class="btn-slider">
-                                        <a href="{{ route('products') }}" class="fl-btn st-2">
-                                            <span class="inner">Shop Now</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="box-feature">
-                                    <div class="image"><img src="assets/images/home/Slider_04.jpg" alt="Aromat Baby Cereal"></div>
-                                </div>
-                            </div>
-
-                            <div class="item-slider-2">
-                                <div class="box-content">
-                                    <div class="sub f-rubik clr-pri-3">100% Natural Goodness</div>
-                                    <div class="title clr-pri-2">Trusted & Wholesome for Babies</div>
-                                    <p class="wrap f-rubik">High-quality, local ingredients for healthy growth and happy tastes. No chemicals, no fuss — just pure Sri Lankan care in every bite.</p>
-                                    <div class="btn-slider">
-                                        <a href="{{ route('about') }}" class="fl-btn st-2">
-                                            <span class="inner">About Us</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="box-feature">
-                                    <div class="image"><img src="assets/images/home/Slider_02.jpg" alt="Aromat Natural Baby Food"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--/.themesflat-carousel-->
-                </div><!--/.slider-2-->
+<section class="swiper hero-one-slider">
+  <div class="swiper-wrapper">
+    <div class="hero-section-one swiper-slide" style="background-image: url('assets/img/home/photo-1526666923127-b2970f64b422.jpg');">
+      <div class="container">
+        <div class="col-lg-12">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="hero-text">
+                <h1>Ukaaye: Telecom & Satellite Experts</h1>
+                <div class="text">
+                  <p>High-quality satellite dishes, DTH receivers, optical fiber cables, networking gear & signal solutions – Delivered island-wide in Sri Lanka!</p>
+                </div>
+                <div class="link-box">
+                  <a href="{{ route('products') }}" class="btn">Shop Now</a>
+                </div>
+              </div>
             </div>
+            <div class="col-lg-6">
+              <div class="hero-img">
+                <img src="assets/img/hero-img.png" alt="Ukaaye satellite and telecom products">
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+
+    <div class="hero-section-one swiper-slide" style="background-image: url('assets/img/home/img-post-antennas.jpg');">
+      <div class="container">
+        <div class="col-lg-12">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="hero-text">
+                <h1>Stronger Signals with Ukaaye</h1>
+                <div class="text">
+                  <p>Best satellite systems, digital receivers, fiber optics, network cables & telecom accessories – Reliable quality, competitive prices.</p>
+                </div>
+                <div class="link-box">
+                  <a href="{{ route('products') }}" class="btn">Explore Products</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="hero-img">
+                <img src="assets/img/hero-img.png" alt="Ukaaye satellite dish and network equipment">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-section-one swiper-slide" style="background-image: url('assets/img/home/pexels-markus-winkler-1430818-11361962.jpg');">
+      <div class="container">
+        <div class="col-lg-12">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="hero-text">
+                <h1>Ukaaye: Island-Wide Connectivity</h1>
+                <div class="text">
+                  <p>From satellite TV setups to advanced networking & fiber solutions – Shop online, get fast delivery & expert support.</p>
+                </div>
+                <div class="link-box">
+                  <a href="{{ route('products') }}" class="btn">Get Started</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="hero-img">
+                <img src="assets/img/hero-img.png" alt="Ukaaye telecom and satellite solutions">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button">
+    <div class="swiper-button-next"><i class="flaticon-right-arrow"></i></div>
+    <div class="swiper-button-prev"><i class="flaticon-left-arrow"></i></div>
+  </div>
 </section>

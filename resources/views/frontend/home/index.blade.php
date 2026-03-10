@@ -4,11 +4,12 @@
 
 
 @section('content')
+    @include('frontend.home.hero')
+
     @include('frontend.home.temp')
 
 
     {{--
-    @include('frontend.home.hero')
     @include('frontend.home.weare')
     @include('frontend.home.about')
     @include('frontend.home.weoffer')
