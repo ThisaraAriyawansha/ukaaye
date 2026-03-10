@@ -1,6 +1,7 @@
 @php
   $icons = ['flaticon-link', 'flaticon-global', 'flaticon-maintenance'];
 @endphp
+
 <section>
   <div class="container">
     <div class="heading">
@@ -28,4 +29,7 @@
       @endforeach
     </div>
   </div>
+    <div class="center">
+        <a href="{{ route('services') }}" class="btn">View All Services</a>
+      </div>
 </section>

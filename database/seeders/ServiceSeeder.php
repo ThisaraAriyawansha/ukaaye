@@ -15,7 +15,7 @@ class ServiceSeeder extends Seeder
 
         $services = [
             [
-                'title'            => 'Satellite TV Installation',
+                'title'            => 'Satellite TV Installation Setup',
                 'description'      => '<p>Professional <strong>satellite dish installation</strong> for homes and businesses. We handle everything from site survey and dish alignment to full receiver setup, ensuring you get the best signal strength and crystal-clear picture quality.</p><ul><li>Free signal strength test</li><li>Multi-room setup available</li><li>Compatible with all major satellite providers</li></ul>',
                 'meta_title'       => 'Satellite TV Installation Services – Ukaaye',
                 'meta_description' => 'Expert satellite dish installation for homes and businesses. Crystal-clear signal, multi-room setup, compatible with all major satellite providers.',
