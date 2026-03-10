@@ -235,6 +235,7 @@
     padding: 3px 12px;
     border-radius: 20px;
     border: 1px solid var(--primary-color);
+    color: #ffffff;
 }
 .pd-code {
     font-family: 'Mulish', sans-serif;
