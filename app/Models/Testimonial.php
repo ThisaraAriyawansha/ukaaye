@@ -17,7 +17,7 @@ class Testimonial extends Model
     public function getImageUrlAttribute(): string
     {
         if (!$this->image_path) {
-            return asset('assets/images/thumbnails/564654.webp');
+            return asset('assets/img/testimonials/456453476.jpg');
         }
 
         $normalized = str_replace('\\', '/', ltrim($this->image_path, '\\/'));

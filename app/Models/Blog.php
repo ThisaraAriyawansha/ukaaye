@@ -26,7 +26,7 @@ class Blog extends Model
     public function getImageUrlAttribute(): string
     {
         if (!$this->image_path) {
-            return asset('assets/images/blog/631322687-H.webp');
+            return asset('assets/img/blog/544356456.png');
         }
 
         // Public assets (assets/images/...)

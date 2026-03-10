@@ -17,7 +17,7 @@ class Gallery extends Model
     public function getImageUrlAttribute(): string
     {
         if (!$this->image_path) {
-            return asset('assets/images/gallery/563543.jpg');
+            return asset('assets/img/gallery/64365467.jpg');
         }
 
         if (str_starts_with($this->image_path, 'assets/')) {

@@ -27,7 +27,7 @@ class Product extends Model
     public function getMainImgUrlAttribute(): string
     {
         if (!$this->main_img) {
-            return asset('assets/images/product/566746376.jpg');
+            return asset('assets/img/product/566746376.jpg');
         }
 
         if (str_starts_with($this->main_img, 'assets/')) {
