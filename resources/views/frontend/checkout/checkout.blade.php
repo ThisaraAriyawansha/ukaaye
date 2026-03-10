@@ -10,6 +10,12 @@
     <div class="co-card">
         <h4 class="co-card__title">Billing Details</h4>
 
+        @if(session('error'))
+        <div style="background:#fff3f3; border:1px solid #ffcdd2; border-radius:8px; padding:12px 16px; margin-bottom:16px; color:#c62828; font-size:13px;">
+            {{ session('error') }}
+        </div>
+        @endif
+
         @if($errors->any())
         <div style="background:#fff3f3; border:1px solid #ffcdd2; border-radius:8px; padding:12px 16px; margin-bottom:16px; color:#c62828; font-size:13px;">
             <ul style="margin:0; padding-left:18px;">
@@ -131,12 +137,13 @@
                         <span class="co-radio__dot"></span>
                         <span class="co-radio__label">Cash on Delivery</span>
                     </label>
-                    <label class="co-radio">
+                    <label class="co-radio" style="display:none;">
+                         <input type="radio" name="payment_type" value="mobile_payment">
                         <input type="radio" name="payment_type" value="bank_transfer">
                         <span class="co-radio__dot"></span>
                         <span class="co-radio__label">Bank Transfer</span>
                     </label>
-                    <label class="co-radio">
+                    <label class="co-radio" style="display:none;">
                         <input type="radio" name="payment_type" value="credit_debit_card">
                         <span class="co-radio__dot"></span>
                         <span class="co-radio__label">Credit / Debit Card</span>
@@ -219,7 +226,7 @@ document.getElementById('checkout-form').addEventListener('submit', function () 
     text-transform: uppercase;
     letter-spacing: .05em;
 }
-.co-required { color: #ff5a5f; }
+.co-required { color: var(--primary-color); }
 .co-input {
     width: 100%;
     height: 44px;
@@ -237,7 +244,7 @@ document.getElementById('checkout-form').addEventListener('submit', function () 
     appearance: none;
 }
 .co-input:focus {
-    border-color: #ff5a5f;
+    border-color: var(--primary-color);
     background: #fff;
 }
 .co-input::placeholder { color: #b0b0b0; }
@@ -371,7 +378,7 @@ document.getElementById('checkout-form').addEventListener('submit', function () 
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #ff5a5f;
+    background: var(--primary-color);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -379,14 +386,14 @@ document.getElementById('checkout-form').addEventListener('submit', function () 
     transition: transform .15s;
 }
 .co-radio input[type="radio"]:checked ~ .co-radio__dot {
-    border-color: #ff5a5f;
+    border-color: var(--primary-color);
 }
 .co-radio input[type="radio"]:checked ~ .co-radio__dot::after {
     transform: translate(-50%, -50%) scale(1);
 }
 .co-radio:has(input:checked) {
-    border-color: #ff5a5f;
-    background: #fff8f8;
+    border-color: var(--primary-color);
+    background: #f5faf5;
 }
 .co-radio__label {
     font-family: 'Mulish', sans-serif;
@@ -401,7 +408,7 @@ document.getElementById('checkout-form').addEventListener('submit', function () 
     width: 100%;
     margin-top: 18px;
     padding: 15px 0;
-    background: #ff5a5f;
+    background: var(--primary-color);
     color: #fff;
     border: none;
     border-radius: 9px;
@@ -411,9 +418,11 @@ document.getElementById('checkout-form').addEventListener('submit', function () 
     letter-spacing: .08em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background .2s;
+    box-shadow: 0 4px 14px rgba(0,0,0,.18);
+    transition: transform .2s, box-shadow .2s, filter .2s;
 }
-.co-btn-place:hover { background: #e04449; }
+.co-btn-place:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.28); filter: brightness(1.08); }
+.co-btn-place:disabled { opacity: .65; cursor: not-allowed; transform: none; box-shadow: none; filter: none; }
 
 /* ── Tablet ≤960px ────────────────────────────────── */
 @media (max-width: 960px) {

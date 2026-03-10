@@ -80,9 +80,9 @@
         font-family: 'Mulish', sans-serif;
         font-size: 13px;
         font-weight: 700;
-        color: #666;
+        color: var(--primary-color);
         background: #fff;
-        border: 1.5px solid #ddd;
+        border: 1.5px solid var(--primary-color);
         box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         pointer-events: all;
         opacity: 0;
@@ -93,11 +93,18 @@
     }
     .aromat-toast.show { opacity: 1; transform: translateY(0); }
     .aromat-toast.hide { opacity: 0; transform: translateY(12px); }
-    .aromat-toast__icon { font-size: 16px; flex-shrink: 0; color: #aaa; }
+    .aromat-toast__icon { font-size: 16px; flex-shrink: 0; color: var(--primary-color); }
     .aromat-toast__msg  { flex: 1; }
     </style>
 
     <script>
+    function updateCartCount(count) {
+        var badge = document.getElementById('cart-count-badge');
+        if (!badge) return;
+        badge.textContent = count;
+        badge.style.display = count > 0 ? 'flex' : 'none';
+    }
+
     function showToast(message, type) {
         type = type || 'cart';
         var icons = { cart: '&#128722;', wishlist: '&#10084;', error: '&#9888;' };

@@ -5,18 +5,18 @@
     <style>
         body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
         .wrap { max-width: 600px; margin: 30px auto; background: #fff; border-radius: 10px; overflow: hidden; }
-        .header { background: #1a1a2e; padding: 28px 30px; text-align: center; }
+        .header { background: #124179; padding: 28px 30px; text-align: center; }
         .header h1 { color: #fff; margin: 0; font-size: 22px; }
         .header p { color: #aaa; margin: 6px 0 0; font-size: 13px; }
         .body { padding: 30px; }
         .body p { color: #444; line-height: 1.7; margin: 0 0 14px; }
-        .order-code { font-size: 20px; font-weight: bold; color: #ff5a5f; letter-spacing: 2px; }
+        .order-code { font-size: 20px; font-weight: bold; color: #124179; letter-spacing: 2px; }
         table { width: 100%; border-collapse: collapse; margin: 20px 0; }
         th { background: #f3f3f3; padding: 10px 12px; text-align: left; font-size: 12px; color: #888; text-transform: uppercase; }
         td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; font-size: 14px; color: #333; }
         .totals td { border: none; }
         .totals .label { color: #888; }
-        .totals .grand { font-weight: bold; font-size: 16px; color: #1a1a2e; }
+        .totals .grand { font-weight: bold; font-size: 16px; color: #124179; }
         .info-grid { display: flex; gap: 20px; }
         .info-block { flex: 1; background: #fafafa; border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
         .info-block h4 { margin: 0 0 8px; font-size: 11px; text-transform: uppercase; color: #aaa; letter-spacing: 1px; }
@@ -28,7 +28,7 @@
 <div class="wrap">
     <div class="header">
         <h1>New Order Received</h1>
-        <p>Aromat Admin Notification</p>
+        <p>Ukaaye — Order Notification</p>
     </div>
     <div class="body">
         <p>A new order has been placed.</p>
@@ -88,7 +88,7 @@
         <p>Please log in to the admin panel to manage this order.</p>
     </div>
     <div class="footer">
-        &copy; {{ date('Y') }} Aromat Baby Food Admin.
+        &copy; {{ date('Y') }} Ukaaye &mdash; Telecommunications, Satellite, Networking &amp; Fiber Products, Sri Lanka.
     </div>
 </div>
 </body>

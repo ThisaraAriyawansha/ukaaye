@@ -245,3 +245,38 @@
     .gwl-pcard > div:first-child { height: 180px !important; }
 }
 </style>
+
+
+@push('scripts')
+<script>
+(function () {
+    var csrfToken = '{{ csrf_token() }}';
+
+    document.querySelectorAll('form[action="{{ route("cart.add") }}"]').forEach(function (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var productId = form.querySelector('[name="product_id"]').value;
+            var qty       = form.querySelector('[name="qty"]').value || 1;
+            var btn       = form.querySelector('button[type="submit"]');
+            btn.disabled  = true;
+
+            fetch('{{ route("cart.add") }}', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': csrfToken },
+                body: JSON.stringify({ product_id: productId, qty: qty })
+            })
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+                showToast(data.message || 'Added to cart!', data.success ? 'cart' : 'error');
+                if (data.success && data.count !== undefined) updateCartCount(data.count);
+                btn.disabled = false;
+            })
+            .catch(function () {
+                showToast('Something went wrong.', 'error');
+                btn.disabled = false;
+            });
+        });
+    });
+})();
+</script>
+@endpush

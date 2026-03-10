@@ -109,6 +109,11 @@
                 </a>
                 </div>
                 
+                <a href="{{ route('cart') }}" id="header-cart-icon" style="position:relative; display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%; background:var(--primary-color); color:#fff; text-decoration:none; flex-shrink:0;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    @php $cartCount = count(session('cart', [])); @endphp
+                    <span id="cart-count-badge" style="position:absolute; top:-5px; right:-5px; min-width:18px; height:18px; background:#fff; color:var(--primary-color); border:2px solid var(--primary-color); border-radius:20px; font-family:'Mulish',sans-serif; font-size:10px; font-weight:800; display:{{ $cartCount > 0 ? 'flex' : 'none' }}; align-items:center; justify-content:center; padding:0 4px; line-height:1;">{{ $cartCount }}</span>
+                </a>
                 <a href="#" class="btn">Request a Quote</a>
             </div>
       </div>

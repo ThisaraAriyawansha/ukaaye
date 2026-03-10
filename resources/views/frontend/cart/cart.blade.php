@@ -1,6 +1,18 @@
 {{-- Cart Section --}}
 <section style="padding: 70px 0 100px;">
     <div class="container">
+
+        @if(session('success'))
+            <div style="padding:12px 18px; background:#f0fdf4; border-left:3px solid var(--primary-color); border-radius:8px; font-family:'Mulish',sans-serif; font-size:14px; color:var(--primary-color); margin-bottom:24px;">
+                {{ session('success') }}
+            </div>
+        @endif
+        @if(session('error'))
+            <div style="padding:12px 18px; background:#fff3f3; border-left:3px solid #c62828; border-radius:8px; font-family:'Mulish',sans-serif; font-size:14px; color:#c62828; margin-bottom:24px;">
+                {{ session('error') }}
+            </div>
+        @endif
+
         @if(count($cart) > 0)
         <div class="cart-wrapper">
 
@@ -70,14 +82,14 @@
                     <span class="totals-label">Total</span>
                     <span class="totals-value totals-value--total" id="cart-total">LKR {{ number_format($total, 2) }}</span>
                 </div>
-                <a href="{{ route('checkout') }}" class="btn-checkout">Proceed to Checkout</a>
-                <a href="{{ route('products') }}" class="btn-continue">&#8592; Continue Shopping</a>
+                <a href="{{ route('checkout') }}" class="btn-checkout" style="display:block; text-align:center; padding:14px 0; background:var(--primary-color); color:#fff; border-radius:8px; font-family:'Mulish',sans-serif; font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; text-decoration:none; box-shadow:0 4px 14px rgba(0,0,0,.18); transition:transform .2s, box-shadow .2s, filter .2s;">Proceed to Checkout</a>
+                <a href="{{ route('products') }}" style="display:block; text-align:center; margin-top:12px; font-family:'Mulish',sans-serif; font-size:13px; font-weight:600; color:var(--primary-color); text-decoration:none;">&#8592; Continue Shopping</a>
             </div>
 
         </div>
         @else
         <div style="text-align:center;padding:80px 0;">
-            <i class="far fa-shopping-cart" style="font-size:60px;color:#ddd;display:block;margin-bottom:20px;"></i>
+            <i class="fa-solid fa-cart-shopping" style="font-size:60px;color:#ddd;display:block;margin-bottom:20px;"></i>
             <h4 style="color:#888;margin-bottom:16px;">Your cart is empty</h4>
             <a href="{{ route('products') }}" class="tf-button color-text color-style1">Browse Products</a>
         </div>
@@ -108,12 +120,12 @@
 .cart-card__price { font-family: 'Mulish', sans-serif; font-size: 14px; font-weight: 600; color: #444; text-align: center; }
 .cart_qty_wrapper { display: flex; align-items: stretch; justify-content: center; height: 36px; border: 1.5px solid #e8e8e8; border-radius: 9px; background: #fff; overflow: hidden; width: 100%; box-sizing: border-box; }
 .cart_qty_decrement, .cart_qty_increment { flex: 0 0 34px; width: 34px; height: 36px; background: transparent; border: none; font-size: 20px; color: #999; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; transition: background .15s, color .15s; }
-.cart_qty_decrement:hover, .cart_qty_increment:hover { background: #ff5a5f; color: #fff; }
+.cart_qty_decrement:hover, .cart_qty_increment:hover { background: var(--primary-color); color: #fff; }
 .cart_qty_input { flex: 1; min-width: 44px; width: auto; height: 36px; border: none; border-left: 1.5px solid #e8e8e8; border-right: 1.5px solid #e8e8e8; text-align: center; font-family: 'Mulish', sans-serif; font-size: 14px; font-weight: 700; color: #1a1a2e; background: #fff; padding: 0 6px; outline: none; box-sizing: border-box; text-decoration: none; }
 .cart-card__subtotal { font-family: 'Mulish', sans-serif; font-size: 14px; font-weight: 700; color: #1a1a2e; text-align: center; }
 .cart-card__remove-wrap { display: flex; align-items: center; justify-content: center; }
-.cart-card__remove { width: 30px; height: 30px; border-radius: 50%; background: #fff0f0; border: none; color: #ff5a5f; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; transition: background .15s, color .15s; }
-.cart-card__remove:hover { background: #ff5a5f; color: #fff; }
+.cart-card__remove { width: 30px; height: 30px; border-radius: 50%; background: #f0f6ff; border: none; color: var(--primary-color); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; transition: background .15s, color .15s; }
+.cart-card__remove:hover { background: var(--primary-color); color: #fff; }
 .cart-totals { width: 290px; flex-shrink: 0; background: #fff; border-radius: 14px; padding: 26px 22px; }
 .totals-title { font-family: 'Mulish', sans-serif; font-size: 19px; font-weight: 800; color: #1a1a2e; margin: 0 0 14px; }
 .totals-row { display: flex; justify-content: space-between; align-items: center; padding: 11px 0; border-bottom: 1px solid #f3f3f3; }
@@ -122,10 +134,7 @@
 .totals-value { font-family: 'Mulish', sans-serif; font-size: 14px; font-weight: 600; color: #1a1a2e; }
 .totals-row--total .totals-label { font-size: 15px; font-weight: 800; color: #1a1a2e; }
 .totals-value--total { font-size: 17px; font-weight: 800; }
-.btn-checkout { display: block; text-align: center; padding: 14px 0; background: #ff5a5f; color: #fff; border-radius: 8px; font-family: 'Mulish', sans-serif; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; transition: background .2s; }
-.btn-checkout:hover { background: #e04449; }
-.btn-continue { display: block; text-align: center; margin-top: 12px; font-family: 'Mulish', sans-serif; font-size: 13px; font-weight: 600; color: #b250fe; text-decoration: none; }
-.btn-continue:hover { text-decoration: underline; }
+.btn-checkout:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.28); filter: brightness(1.08); }
 @media (max-width: 960px) {
     .cart-wrapper { flex-direction: column; }
     .cart-totals { width: 100%; box-sizing: border-box; }
@@ -227,6 +236,7 @@
             .then(function (data) {
                 card.remove();
                 recalcTotals();
+                updateCartCount(data.count);
                 if (data.count === 0) location.reload();
             });
         });

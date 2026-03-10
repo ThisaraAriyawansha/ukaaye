@@ -317,11 +317,11 @@
     cursor: pointer;
     transition: background .2s, box-shadow .2s;
     letter-spacing: .04em;
-    box-shadow: 0 4px 16px rgba(26, 92, 40, 0.35);
+    box-shadow: 0 4px 16px rgba(0, 87, 183, 0.35);
 }
 .pd-btn-cart:hover {
     background: var(--primary-color);
-    box-shadow: 0 6px 22px rgba(26, 92, 40, 0.55);
+    box-shadow: 0 6px 22px rgba(18, 65, 121, 0.55);
 }
 
 /* ── Tags ──────────────────────────────────────── */
@@ -545,6 +545,7 @@
 </style>
 
 <script>
+// Gallery thumbs
 document.querySelectorAll('.pd-thumb').forEach(function(thumb) {
     thumb.addEventListener('click', function() {
         document.getElementById('pd-main-img').src = this.dataset.img;
@@ -552,6 +553,8 @@ document.querySelectorAll('.pd-thumb').forEach(function(thumb) {
         this.classList.add('active');
     });
 });
+
+// Qty stepper
 document.querySelectorAll('.cart_qty_decrement').forEach(function(btn) {
     btn.addEventListener('click', function() {
         var input = this.closest('.cart_qty_wrapper').querySelector('.cart_qty_input');
@@ -565,4 +568,36 @@ document.querySelectorAll('.cart_qty_increment').forEach(function(btn) {
         input.value = Math.min(max, parseInt(input.value || 1) + 1);
     });
 });
+
+// Add to Cart — AJAX for all cart forms
+(function () {
+    var csrfToken = '{{ csrf_token() }}';
+
+    document.querySelectorAll('form[action="{{ route("cart.add") }}"]').forEach(function (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var productId = form.querySelector('[name="product_id"]').value;
+            var qtyInput  = form.querySelector('[name="qty"]');
+            var qty       = qtyInput ? qtyInput.value : 1;
+            var btn       = form.querySelector('button[type="submit"]');
+            btn.disabled  = true;
+
+            fetch('{{ route("cart.add") }}', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': csrfToken },
+                body: JSON.stringify({ product_id: productId, qty: qty })
+            })
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+                showToast(data.message || 'Added to cart!', data.success ? 'cart' : 'error');
+                if (data.success && data.count !== undefined) updateCartCount(data.count);
+                btn.disabled = false;
+            })
+            .catch(function () {
+                showToast('Something went wrong.', 'error');
+                btn.disabled = false;
+            });
+        });
+    });
+})();
 </script>

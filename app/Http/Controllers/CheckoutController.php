@@ -14,9 +14,14 @@ class CheckoutController extends Controller
 {
     public function index()
     {
-        $cart     = session('cart', []);
+        $cart = session('cart', []);
+
+        if (empty($cart)) {
+            return redirect()->route('cart')->with('error', 'Your cart is empty. Add items before checking out.');
+        }
+
         $subtotal = collect($cart)->sum(fn($item) => $item['price'] * $item['qty']);
-        $shipping = $subtotal > 0 ? 200 : 0;
+        $shipping = 200;
         $total    = $subtotal + $shipping;
 
         return view('frontend.checkout.index', compact('cart', 'subtotal', 'shipping', 'total'));
