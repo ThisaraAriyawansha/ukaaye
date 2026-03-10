@@ -1,189 +1,160 @@
-            <header id="site-header" class="header_main header2">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="site-header-inner fx"> 
-                                <div id="site-logo" class="clearfix">
-                                    <a href="{{ route('home') }}" class="logo">
-                                        <img class="logo-main" src="assets/images/logo/logo_bg.webp" alt="Aromat Logo" 
-                                            style="max-height: 60px; width: auto; height: auto;" width="82" height="60" loading="lazy">                                    </a>
-                                </div>
-                                <div class="btn-menu"><span></span></div>
-                                <div class="nav-wrap">
-                                    <nav id="mainnav" class="mainnav">
-                                        <ul class="menu">
-                                            <li class="inner">
-                                                <a href="{{ route('home') }}" >HOME</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{{ route('about') }}">About</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{{ route('products') }}">Products</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{{ route('blog') }}">Blog</a>
-                                            </li>
-                                            
-                                            <li class="inner">
-                                                <a href="{{ route('contactus') }}" >CONTACTS</a>
-                                            </li>
-
-                                            <li class="menu-item-has-children">
-                                                <a>More</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="{{ route('cart') }}">Cart</a></li>
-                                                    <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
-                                                    <li><a href="{{ route('faq') }}">FAQS</a></li>
-                                                    <li><a href="{{ route('testimonials') }}">Testimonials</a></li>
-                                                    <li><a href="{{ route('gallery') }}">Gallery</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <!-- /.menu -->
-                                    </nav>
-                                </div>
-                                <div class="header-right fx">
-                                    <div id="header-search">
-                                        <a href="#" class="search-box header-search-icon">
-                                            <i class="far fa-search"></i>
-                                        </a>
-                                        <form role="search" method="get" class="header-search-form" action="#">
-                                            <input type="text" value="" name="s" class="header-search-field" placeholder="Search...">
-                                            <button type="submit" class="header-search-submit" title="Search"><i class="fa fa-search"></i></button>
-                                        </form>
-                                    </div>
-                                    <div class="header-contact fx">
-                                        <a href="#" class="menu-bar-right header-menu">
-                                            <svg data-name="Hero Area" xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58">
-                                                <defs>
-                                                <style>
-                                                    .cls-1 {
-                                                    fill: #b250fe;
-                                                    }
-                                            
-                                                    .cls-1, .cls-2 {
-                                                    fill-rule: evenodd;
-                                                    }
-                                            
-                                                    .cls-2 {
-                                                    fill: #fff;
-                                                    }
-                                                </style>
-                                                </defs>
-                                                <g data-name="Menu Area">
-                                                <g id="Menu_bar" data-name="Menu bar">
-                                                    <path id="Bg" class="cls-1" d="M7.853,2.283c14.9-3.89,29.969-1.4,43.467.819a7.923,7.923,0,0,1,5.735,5.422c3.111,14.141-.428,28.636-1.166,42.981a5.157,5.157,0,0,1-4.773,4.875c-13.49.568-23.463,3.285-41.787,0.9C5.948,56.807,2.348,54.2,1.9,51.7-0.683,37.877.2,23.508,2.194,8.757a8.71,8.71,0,0,1,5.66-6.473"/>
-                                                    <path id="Bar" class="cls-2" d="M16,17H42a2,2,0,0,1,0,4H16A2,2,0,0,1,16,17Zm0,10H42a2,2,0,0,1,0,4H16A2,2,0,0,1,16,27Zm0,10H42a2,2,0,0,1,0,4H16A2,2,0,0,1,16,37Z"/>
-                                                </g>
-                                                </g>
-                                            </svg>
-                                        </a>
-
-                                        <div class="inner-contact fx">
-                                            <svg data-name="Hero Area" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="47" viewBox="0 0 49 47">
-                                                <g data-name="Menu Area">
-                                                <g>
-                                                    <image width="49" height="47" xlink:href="data:img/png;base64,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"/>
-                                                </g>
-                                                </g>
-                                            </svg>
-                                            <ul>
-                                                <li class="clr-pri-2">Hotline</li>
-                                                <li class="clr-pri-2">+94 76 544 5356</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div id="sidebar2" class="side-menu__block">
-                    <div class="side-menu__block-overlay custom-cursor__overlay"></div>
-                    
-                    <div class="inner-sidebar side-menu__block-inner fl-st-1">
-                        <div class="side-menu__top justify-content-end">
-                            <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="assets/images/common/close.png" alt="images"></a>
-                        </div>
-                        <div class="wrap">
-                            
-
-                            <div class="widget widget-search st-2">
-                                <h4 class="title-widget fl-ctm-1">Search<span class="ctm-inner"></span></h4>
-                                <div class="form-search-widget">
-                                    <form action="#">
-                                        <input type="text" placeholder="Search Here">
-                                        <button><i class="fas fa-search"></i></button>
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="widget widget-category st-2">
-                                <h4 class="title-widget fl-ctm-1">category<span class="ctm-inner"></span></h4>
-                                <div class="list-category">
-                                    <ul>
-                                        <li class="fx"><span class="st wd-ctm">Arts &amp; Drawing</span><span class="st">05</span></li>
-                                        <li class="fx"><span class="st wd-ctm">Basic Language</span><span class="st">02</span></li>
-                                        <li class="fx"><span class="st wd-ctm">Graphics Design</span><span class="st">07</span></li>
-                                        <li class="fx"><span class="st wd-ctm">Web Development</span><span class="st">04</span></li>
-                                        <li class="fx"><span class="st wd-ctm">Lifestyle</span><span class="st">06</span></li>
-                                        <li class="fx"><span class="st wd-ctm">GYM &amp; Gaming</span><span class="st">05</span></li>
-                                        <li class="fx"><span class="st wd-ctm">Events &amp; Party</span><span class="st">05</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="widget widget-news st-2">
-                                <h4 class="title-widget fl-ctm-1">recent news<span class="ctm-inner"></span></h4>
-                                <ul class="list-news">
-                                    <li class="fx">
-                                        <img src="assets/images/thumbnails/widget1.jpg" alt="Image" class="feature">
-                                        <ul class="box-content">
-                                            <li><h6 class="title"><a href="blog-single.html">Bake Layers Accesilit Testing Supporte</a></h6></li>
-                                            <li><a href="blog-single.html" class="fx meta-news clr-pri-4"><i class="far fa-calendar-alt"></i><span class="f-rubik">25 nov 2021</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="fx">
-                                        <img src="assets/images/thumbnails/widget2.jpg" alt="Image" class="feature">
-                                        <ul class="box-content">
-                                            <li><h6 class="title"><a href="blog-single.html">Bake Layers Accesilit Testin Supporte</a></h6></li>
-                                            <li><a href="blog-single.html" class="fx meta-news clr-pri-4"><i class="far fa-calendar-alt"></i><span class="f-rubik">25 nov 2021</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="fx">
-                                        <img src="assets/images/thumbnails/widget3.jpg" alt="Image" class="feature">
-                                        <ul class="box-content">
-                                            <li><h6 class="title"><a href="blog-single.html">Bake Layers Accesilit Testin Supporte</a></h6></li>
-                                            <li><a href="blog-single.html" class="fx meta-news clr-pri-4"><i class="far fa-calendar-alt"></i><span class="f-rubik">25 nov 2021</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="fx">
-                                        <img src="assets/images/thumbnails/widget4.jpg" alt="Image" class="feature">
-                                        <ul class="box-content">
-                                            <li><h6 class="title"><a href="blog-single.html">Bake Layers Accesilit Testin Supporte</a></h6></li>
-                                            <li><a href="blog-single.html" class="fx meta-news clr-pri-4"><i class="far fa-calendar-alt"></i><span class="f-rubik">25 nov 2021</span></a></li>
-                                        </ul>
-                                    </li>
+<header>
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-slid">
+        <div>
+          <div class="phone-data">
+            <div class="phone">
+              <i class="flaticon-iphone"></i>
+              <span>Call Agent:</span><a href="callto:+18880002222">+1 888 000 2222</a>
+            </div>
+            <div class="phone d-flax align-items-center">
+              <i>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.833313 12.7083C0.488135 12.7083 0.208313 12.9882 0.208313 13.3333C0.208313 13.6785 0.488135 13.9583 0.833313 13.9583H3.33331C3.67849 13.9583 3.95831 13.6785 3.95831 13.3333C3.95831 12.9882 3.67849 12.7083 3.33331 12.7083H0.833313Z" fill="black"/>
+                  <path d="M0.833313 15.2083C0.488135 15.2083 0.208313 15.4882 0.208313 15.8333C0.208313 16.1785 0.488135 16.4583 0.833313 16.4583H5.83331C6.17849 16.4583 6.45831 16.1785 6.45831 15.8333C6.45831 15.4882 6.17849 15.2083 5.83331 15.2083H0.833313Z" fill="black"/>
+                  <path d="M2.59071 4.24172L2.5 4.16667C2.757 3.81294 3.0305 3.55276 3.38422 3.29576C4.4795 2.5 6.04189 2.5 9.16667 2.5H10.8333C13.9581 2.5 15.5205 2.5 16.6157 3.29576C16.9695 3.55276 17.2214 3.78443 17.4784 4.13816L17.3737 4.24225L15.4505 6.16551C14.0491 7.56689 13.0416 8.5725 12.1726 9.23558C11.318 9.88758 10.6712 10.1491 9.99992 10.1491C9.3285 10.1491 8.68175 9.88758 7.82717 9.23558C6.95817 8.5725 5.95066 7.56689 4.54927 6.16551L2.92989 4.54612L2.59071 4.24172Z" fill="black"/>
+                  <path d="M1.66663 9.99999C1.66663 7.80006 1.66663 6.37454 1.94431 5.34122L2.06983 5.45388L3.69916 7.08319C5.05938 8.44341 6.12537 9.50941 7.06891 10.2293C8.03468 10.9662 8.94529 11.3991 9.99988 11.3991C11.0544 11.3991 11.965 10.9662 12.9308 10.2293C13.8743 9.50941 14.9403 8.44341 16.3005 7.08321L18.0528 5.3309C18.3333 6.36504 18.3333 7.79274 18.3333 9.99999C18.3333 13.1247 18.3333 14.6872 17.5375 15.7824C17.2805 16.1362 16.9695 16.4472 16.6157 16.7042C15.5205 17.5 13.958 17.5 10.8333 17.5H9.16663C7.97633 17.5 7.01273 17.5 6.2153 17.456C6.95166 17.2833 7.49996 16.6223 7.49996 15.8333C7.49996 14.9128 6.75377 14.1667 5.83329 14.1667H4.77699C4.9188 13.9215 4.99996 13.6369 4.99996 13.3333C4.99996 12.4128 4.25377 11.6667 3.33329 11.6667H1.67263C1.66663 11.1657 1.66663 10.6129 1.66663 9.99999Z" fill="black"/>
+                  </svg>
+              </i>
+              <span>Send Email: </span>
+              <a class="me-3" href="mailto:info@example.com">info@example.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="social-media-text">
+            <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+            <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i>Linked in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-bar">
+    <div class="container">
+        <div class="bottom-bar-text">
+          <a href="index.html"><img src="assets/img/logo/logo_bg_remove.png" alt="logo"></a>
+            <nav class="navbar">
+                <ul class="navbar-links">
+                    <li class="navbar-dropdown menu-item-children">
+                        <a href="#">Home</a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">home 1</a></li>
+                            <li><a href="index-2.html">home 2</a></li>
+                            <li><a href="index-3.html">home 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-dropdown">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="navbar-dropdown menu-item-children">
+                        <a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-item-children"><a href="#">project</a>
+                                <ul class="sub-menu">
+                                  <li><a href="our-project.html">our project</a></li>
+                                  <li><a href="our-project-2.html">our project 2</a></li>
+                                  <li><a href="project-details.html">project details</a></li>
                                 </ul>
-                            </div>
-
-                            <div class="widget widget-tag st-2">
-                                <h4 class="title-widget fl-ctm-1">best tags<span class="ctm-inner"></span></h4>
-                                <ul class="list-tag">
-                                    <li><a href="shop-details.html" class="f-rubik active">Technology</a></li>
-                                    <li><a href="shop-details.html" class="f-rubik">service</a></li>
-                                    <li><a href="shop-details.html" class="f-rubik">team</a></li>
-                                    <li><a href="shop-details.html" class="f-rubik">solutions</a></li>
-                                    <li><a href="shop-details.html" class="f-rubik">consultancy</a></li>
-                                    <li><a href="shop-details.html" class="f-rubik">It Company</a></li>
-                                    <li><a href="shop-details.html" class="f-rubik">agency</a></li>
-                                </ul>
-                            </div>
-
-                            
-                        </div>
-                    </div><!--/inner-sidebar-->
+                            </li>
+                            <li><a href="our-history.html">our history</a></li>
+                            <li><a href="pricing-plans.html">pricing plans</a></li>
+                            <li><a href="faq.html">faq</a></li>
+                            <li><a href="404.html">404</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-dropdown menu-item-children">
+                        <a href="#">Services</a>
+                        <ul class="sub-menu">
+                            <li><a href="our-services.html">our services</a></li>
+                            <li><a href="service-details.html">service details</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-dropdown menu-item-children">
+                        <a href="#">News</a>
+                        <ul class="sub-menu">
+                            <li><a href="our-blog.html">our blog</a></li>
+                            <li><a href="blog-details.html">blog details</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-dropdown">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-end">
+                <div class="bar-menu">
+                  <i class="fa-solid fa-cart-plus"></i>
                 </div>
-            </header>     
+                <a href="javascript:void(0)" id="desktop-menu" class="menu-start">
+                  <svg id="ham-menue" viewBox="0 0 100 100"> <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path> <path class="line line2" d="M 20,50 H 80"></path> <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path> </svg>
+                </a>
+                <div class="header-search-button search-box-outer">
+                <a href="javascript:void(0)" class="search-btn">
+                  <i class="flaticon-magnifying-glass"></i>
+                </a>
+                </div>
+                
+                <a href="#" class="btn">Request a Quote</a>
+            </div>
+      </div>
+    </div>
+  </div>
+    <div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
+        <div class="res-log">
+            <a href="index.html">
+                <img src="assets/img/logo.png" alt="Responsive Logo" class="white-logo">
+            </a>
+        </div>
+        <ul>
+            <li class="menu-item-has-children"><a href="JavaScript:void(0)">Home</a>
+                <ul class="sub-menu">
+                    <li><a href="index.html">home 1</a></li>
+                    <li><a href="index-2.html">home 2</a></li>
+                    <li><a href="index-3.html">home 3</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">about</a></li>
+            <li class="menu-item-has-children"><a href="JavaScript:void(0)">pages</a>
+                <ul class="sub-menu">
+                    <li><a href="our-project.html">our project</a></li>
+                    <li><a href="our-project-2.html">our project 2</a></li>
+                    <li><a href="project-details.html">project details</a></li>
+                    <li><a href="our-history.html">our history</a></li>
+                    <li><a href="pricing-plans.html">pricing plans</a></li>
+                    <li><a href="faq.html">faq</a></li>
+                    <li><a href="404.html">404</a></li>
+                </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="JavaScript:void(0)">service</a>
+                <ul class="sub-menu">
+                    <li><a href="our-services.html">our services</a></li>
+                    <li><a href="service-details.html">service details</a></li>
+                </ul>
+            </li>
+            <li class="menu-item-has-children"><a href="JavaScript:void(0)">News</a>
+                <ul class="sub-menu">
+                    <li><a href="our-blog.html">our blog</a></li>
+                    <li><a href="blog-details.html">blog details</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <a href="JavaScript:void(0)" id="res-cross"></a>
+    </div>
+    <div class="mobile-nav desktop-menu">
+          <h2>Installation and Maintenance of Solar Panels</h2>
+          <p class="des">Practical renewable energy technology thatreduces costs and helps the environment</p>
+          <figure>
+            <img src="https://placehold.co/320x163" alt="img">
+          </figure>
+          <h3>Get in touch</h3>
+          <p class="num"><a href="callto:+18880002222">+18880002222</a></p>
+          <p class="adrs">374 William S Canning Blvd, Fall River MA 2721, USA</p>
+          <div class="social-medias">
+              <a href="javascript:void(0)">Facebook</a>
+              <a href="javascript:void(0)">Twitter</a>
+              <a href="javascript:void(0)">Linkedin</a>
+            </div>
+        </div>
+</header>

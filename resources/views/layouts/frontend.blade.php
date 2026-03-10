@@ -1,46 +1,30 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<!--<![endif]-->
-
+<html lang="zxx">
 <head>
-    <!-- Basic Page Needs -->
-    <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Aromat</title>
-
-    <meta name="author" content="themesflat.com">
-
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- Theme Style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    <!-- Reponsive -->
-    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">       
-
-    <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="assets/images/logo/logo_bg.webp">
-    <link rel="apple-touch-icon-precomposed" href="assets/images/logo/logo_bg.webp">
-
-</head>
-
-<body class="counter-scroll header-fixed @yield('body-class', 'home2')">
-
-    <!-- Preloader -->
-    <div id="preload" class="preload">
-        <div class="preload-logo"></div>
-    </div>
-
-    <div id="wrapper">
-        <div id="page" class="clearfix">
-            <div class="top-bar">
-                <div class="inner jus-ct">
-                    <p class="clr-pri-1">Working Jours : Sun - Friday, 08:00 am - 05:00 pm</p>
-                </div>
-            </div>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boltx - Home</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <!-- CSS only -->
+   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+   <!-- fancybox -->
+   <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+   <link rel="stylesheet" href="assets/css/slick.css">
+   <link rel="stylesheet" href="assets/css/slick-theme.css">
+   <link rel="stylesheet" href="assets/css/swiper.css">
+   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="assets/font/flaticon_mycollection.css">
+   <!-- style -->
+   <link rel="stylesheet" href="assets/css/style.css">
+   <!-- responsive -->
+   <link rel="stylesheet" href="assets/css/responsive.css"> 
+   <script src="assets/js/jquery-3.6.0.min.js"></script>
+   <script src="assets/js/preloader.js"></script>
+ </head>
+<body>
+<div class="preloader">
+  <div id="loader"></div>
+</div> 
 
             <!-- header begin -->
             @include('frontend.components.header')
@@ -52,22 +36,25 @@
             @include('frontend.components.footer')
             <!-- footer close -->
 
-    </div>
-    </div>
-    <!-- /#wrapper -->
+<!-- search-popup -->
 
-    <a id="scroll-top"></a>
+<!-- search-popup end -->
+<!-- progress -->
+<div id="progress">
+      <span id="progress-value"><i class="fa-solid fa-up-long"></i></span>
+</div>
+<!-- search-popup -->
+<!-- Bootstrap Js -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- fancybox -->
+<script src="assets/js/jquery.fancybox.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/swiper.js"></script>
+<script src="assets/js/sweetalert.min.js"></script> 
+<script src="assets/js/contact.js"></script>
+<script src="assets/js/custom.js"></script>
 
-    <!-- Javascript -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/plugin.js"></script>
-    <script src="assets/js/countto.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/owl.carousel2.thumbs.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/shortcodes.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
 
     <!-- Toast Alert System -->
     <div id="aromat-toast-container" style="
@@ -132,5 +119,3 @@
 
     @stack('scripts')
 </body>
-
-</html>

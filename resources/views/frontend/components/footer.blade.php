@@ -1,94 +1,134 @@
-<footer id="footer">
-    <section class="tf-subcribe">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-12">
-                    <div class="subcribe-wp">
-                        <h2 class="title">Subscribe For Parenting Tips</h2>
-                        <p class="sub f-mulish">Get expert advice, new product updates & special offers for your little one.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-12">
-                    <div class="subcribe-form fx" id="subscribe-form">
-                        <form action="#">
-                            <input type="email" id="subscribe-email" placeholder="Email Address">
-                            <button class="fl-btn st-7" id="subscribe-button"><span class="inner">Subscribe</span></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+<footer style="background-image: url(assets/img/footer-line.png);">
+  <div class="container">
+    <div class="footer-top">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="logo">
+            <img src="assets/img/logo.png" alt="logo">
+            <p>Solar energy is radiant light and heat from the Sun that is harnessed using a range of technologies such as solar power to generate electricity, solar thermal energy, and solar architecture.</p>
+          </div>
         </div>
-    </section>
-    <div class="footer-inner">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="widget-footer">
-                        <div class="widget widget-logo">
-                            <div class="logo-bottom" id="logo-footer">
-                                <a href="index.html"><img src="assets/images/logo/logo_bg.png" 
-                                style="max-height: 80px; width: auto; height: auto;" alt="Aromat Baby Food"></a>
-                            </div>
-                            <p class="wrap f-mulish">Sri Lanka's most trusted baby food brand. Made with love, fed with trust. Pure, organic nutrition for every stage.</p>
-                            <div class="list-contact">
-                                <ul>
-                                    <li class="fx"><span><i class="far fa-map-marker-alt"></i> Piliyandala, Sri Lanka</span></li>
-                                    <li class="fx"><a href="mailto:info@aromat.lk"><i class="far fa-envelope"></i> info@aromat.lk</a></li>
-                                    <li class="fx"><a href="tel:+94765445356"><i class="fal fa-phone"></i> +94 76 544 5356</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="widget widget-business">
-                           <div class="inner">
-                                <div class="op-time">
-                                    <h4 class="title-widget">Opening Hours</h4>
-                                    <ul>
-                                        <li><span class="f-mulish">Monday - Friday</span></li>
-                                        <li><span class="f-mulish">9:00 am - 6:00 pm</span></li>
-                                        <li><span class="f-mulish">Saturday</span></li>
-                                        <li><span class="f-mulish">9:00 am - 1:00 pm</span></li>
-                                    </ul>
-                                </div>
-                                <div class="cls-time">
-                                    <p>Sunday & Public Holidays Closed</p>
-                                </div>
-                           </div>
-                        </div>
-                        <div class="widget widget-link">
-                            <h4 class="title-widget">Quick Links</h4>
-                            <ul class="list-link">
-                                <li class="fx"><a href="{{ route('home') }}" class="wd-ctm f-mulish">Home</a></li>
-                                <li class="fx"><a href="{{ route('about') }}" class="wd-ctm f-mulish">About Us</a></li>
-                                <li class="fx"><a href="{{ route('products') }}" class="wd-ctm f-mulish">Products</a></li>
-                                <li class="fx"><a href="{{ route('blog') }}" class="wd-ctm f-mulish">Blogs</a></li>
-                                <li class="fx"><a href="{{ route('contactus') }}" class="wd-ctm f-mulish">Contacts</a></li>
-                                <li class="fx"><a href="{{ route('cart') }}" class="wd-ctm f-mulish">Cart</a></li>
-                                <li class="fx"><a href="{{ route('wishlist') }}" class="wd-ctm f-mulish">Whishlist</a></li>
-                            </ul>
-                        </div>
-                        <div class="widget widget-news st-3">
-                            <h4 class="title-widget">Recent Articles</h4>
-                            <ul class="list-news">
-                                @foreach($footerRecentBlogs as $recentBlog)
-                                <li class="fx">
-                                    <img src="{{ $recentBlog->image_url }}" alt="{{ $recentBlog->title }}" class="feature">
-                                    <ul class="box-content">
-                                        <li><h6 class="title"><a href="{{ url('/' . $recentBlog->slug) }}">{{ Str::limit($recentBlog->title, 30) }}</a></h6></li>
-                                        <li><a href="{{ url('/' . $recentBlog->slug) }}" class="fx meta-news clr-pri-6"><i class="far fa-calendar-alt"></i>{{ $recentBlog->published_at ? $recentBlog->published_at->format('d M Y') : '' }}</a></li>
-                                    </ul>
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="footer-bottom jus-ct">
-                        <p class="copy-right">Copyright &copy; <?= date('Y') ?>, Aromat Baby Food. All Rights Reserved.</p>
-                        <p class="copy-right">Design & Developed by <a href="https://creatxsoftware.com/" target="_blank" rel="noopener noreferrer">CreatX Software</a></p>
-                    </div>
-                </div>
+        <div class="col-lg-6">
+          <div class="subscribe">
+            <h3>Subscribe Newsletter</h3>
+            <p>Stay up to update with our latest news and products.</p>
+            <form role="form" class="get-subscribee" id="subscribe-form" method="post"> 
+              <input type="email" name="Email_Address" placeholder="Enter your email here" required="">
+              <button type="submit" class="btn bk">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="widget-title">
+          <h3>Contact Us</h3>
+          <div class="boder"></div>
+          <div class="get-in-touch">
+            <div><i>
+              <svg width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_94_1733)">
+                <path d="M15.31 0H7.65726C6.30674 0.00153143 5.21234 1.09593 5.211 2.44646V20.5537C5.21234 21.9042 6.30674 22.9986 7.65726 22.9999H15.31C16.6605 22.9986 17.7549 21.9042 17.7565 20.5537V2.44646C17.7549 1.09593 16.6605 0.00153143 15.31 0ZM11.4837 20.9092C10.9062 20.9092 10.4381 20.4411 10.4381 19.8636C10.4381 19.2862 10.9062 18.8182 11.4837 18.8182C12.0611 18.8182 12.5291 19.2862 12.5291 19.8636C12.5291 20.4411 12.0611 20.9092 11.4837 20.9092ZM13.0519 3.13636H9.91554C9.62687 3.13636 9.39275 2.90225 9.39275 2.61357C9.39275 2.3249 9.62687 2.09097 9.91554 2.09097H13.0519C13.3406 2.09097 13.5745 2.3249 13.5745 2.61357C13.5745 2.90225 13.3406 3.13636 13.0519 3.13636Z" fill="black"/>
+                </g>
+              </svg>
+            </i></div>
+            <div>
+              <span>Phone No:</span> 
+              <h6><a href="callto:+1(251)3441354">+1 0109 -1812-347</a></h6>
             </div>
+          </div>
+          <div class="get-in-touch">
+            <div><i>
+              <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_94_1722)">
+                <path d="M1.49888 15.54C1.09073 15.54 0.759857 15.8709 0.759857 16.2791C0.759857 16.6872 1.09073 17.0181 1.49888 17.0181H4.45496C4.8631 17.0181 5.19398 16.6872 5.19398 16.2791C5.19398 15.8709 4.8631 15.54 4.45496 15.54H1.49888Z" fill="black"/>
+                <path d="M1.49888 18.4961C1.09073 18.4961 0.759857 18.827 0.759857 19.2351C0.759857 19.6433 1.09073 19.9741 1.49888 19.9741H7.41104C7.81919 19.9741 8.15006 19.6433 8.15006 19.2351C8.15006 18.827 7.81919 18.4961 7.41104 18.4961H1.49888Z" fill="black"/>
+                <path d="M3.57686 5.5292L3.4696 5.44045C3.77349 5.02219 4.09688 4.71454 4.51514 4.41066C5.81023 3.46973 7.65765 3.46973 11.3525 3.46973H13.3232C17.018 3.46973 18.8655 3.46973 20.1605 4.41066C20.5788 4.71454 20.8767 4.98848 21.1806 5.40674L21.0568 5.52982L18.7827 7.80394C17.1256 9.46098 15.9343 10.65 14.9068 11.4341C13.8963 12.205 13.1316 12.5142 12.3377 12.5142C11.5438 12.5142 10.7791 12.205 9.76863 11.4341C8.74109 10.65 7.54977 9.46098 5.89273 7.80394L3.97792 5.88913L3.57686 5.5292Z" fill="black"/>
+                <path d="M2.48424 12.3383C2.48424 9.737 2.48424 8.05142 2.81258 6.82958L2.961 6.96279L4.88757 8.88935C6.49594 10.4977 7.7564 11.7582 8.87207 12.6094C10.014 13.4807 11.0908 13.9926 12.3377 13.9926C13.5846 13.9926 14.6614 13.4807 15.8034 12.6094C16.919 11.7582 18.1795 10.4977 19.7879 8.88937L21.8598 6.81738C22.1914 8.04019 22.1914 9.72833 22.1914 12.3383C22.1914 16.0331 22.1914 17.8805 21.2505 19.1756C20.9466 19.5939 20.5788 19.9617 20.1605 20.2656C18.8655 21.2065 17.018 21.2065 13.3232 21.2065H11.3525C9.94503 21.2065 8.80564 21.2065 7.86274 21.1545C8.73343 20.9503 9.38176 20.1687 9.38176 19.2358C9.38176 18.1474 8.49944 17.2651 7.41104 17.2651H6.16204C6.32971 16.9752 6.42568 16.6387 6.42568 16.2797C6.42568 15.1913 5.54336 14.309 4.45496 14.309H2.49134C2.48424 13.7167 2.48424 13.063 2.48424 12.3383Z" fill="black"/>
+                </g>
+              </svg>
+            </i></div>
+            <div>
+              <span>Email Address:</span> 
+              <h6><a href="mailto:username@domain.com">username@domain.com</a></h6>
+            </div>
+          </div>
+          <div class="get-in-touch">
+            <div><i>
+              <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_94_1710)">
+                <path d="M12.3379 7.11523C10.6713 7.11523 9.31538 8.47115 9.31538 10.1377C9.31538 11.8043 10.6713 13.1602 12.3379 13.1602C14.0045 13.1602 15.3604 11.8043 15.3604 10.1377C15.3604 8.47115 14.0045 7.11523 12.3379 7.11523Z" fill="black"/>
+                <path d="M19.4104 3.44324C17.5213 1.55407 15.0095 0.513672 12.3379 0.513672C9.66623 0.513672 7.15444 1.55407 5.26532 3.44324C3.37611 5.33245 2.33571 7.8442 2.33571 10.5158C2.33571 15.9205 7.44603 20.4158 10.1915 22.8309C10.573 23.1665 10.9024 23.4563 11.1648 23.7014C11.4937 24.0087 11.9157 24.1623 12.3378 24.1623C12.7599 24.1623 13.182 24.0087 13.5108 23.7015C13.7733 23.4563 14.1028 23.1665 14.4842 22.8309C17.2297 20.4159 22.34 15.9205 22.34 10.5159C22.34 7.8442 21.2996 5.33245 19.4104 3.44324ZM12.3379 14.5457C9.90739 14.5457 7.93009 12.5684 7.93009 10.1379C7.93009 7.70739 9.90739 5.73009 12.3379 5.73009C14.7684 5.73009 16.7457 7.70739 16.7457 10.1379C16.7457 12.5684 14.7683 14.5457 12.3379 14.5457Z" fill="black"/>
+                </g>
+              </svg>
+            </i></div>
+            <div>
+              <span class="pt-2 pb-0">12/7 new town, 245x Town 1214 Street, United State</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="widget-title">
+          <h3>Useful Links</h3>
+          <div class="boder"></div>
+          <ul>
+            <li><i class="fa-solid fa-caret-right"></i><a href="about.html">About Us</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="#">Timeline </a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="#">Image Gallery </a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="contact.html">Contact Us</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="faq.html">Faq’s</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="#">Quality Management</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="#">Health & Safety </a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="#">Environmental</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="#">Environmental</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="widget-title mb-0">
+          <h3>Recent News</h3>
+          <div class="boder"></div>
+          <ul class="recent-news mb-0">
+            <li>
+              <figure>
+                <img src="https://placehold.co/130x110" alt="img">
+              </figure>
+              <div>
+                <span>Dec 20, 2024</span>
+                <a href="#">2021 Batterman Award honorsBrad Burkhart</a>
+              </div>
+            </li>
+            <li class="pb-0">
+              <figure>
+                <img src="https://placehold.co/130x110" alt="img">
+              </figure>
+              <div>
+                <span>Dec 20, 2024</span>
+                <a href="#">2021 Batterman Award honorsBrad Burkhart</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-text">
+          <h6><b>Ⓒ  Copyright Boltx 2023</b>. All Right Reserved.</h6>
+          <ul>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#"> Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+          </ul>
         </div>
     </div>
-</footer>
+  </div>
+  <img src="assets/img/footer-icon.png" alt="footer-icon" class="footer-icon">
+</footer> 

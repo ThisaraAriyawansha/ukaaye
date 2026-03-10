@@ -4,6 +4,10 @@
 
 
 @section('content')
+    @include('frontend.home.temp')
+
+
+    {{--
     @include('frontend.home.hero')
     @include('frontend.home.weare')
     @include('frontend.home.about')
@@ -15,5 +19,6 @@
     @include('frontend.home.testimonials')
     @include('frontend.home.blog')
     @include('frontend.home.temp')
+    --}}
 
  @endsection
