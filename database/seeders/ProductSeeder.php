@@ -501,7 +501,7 @@ class ProductSeeder extends Seeder
                 'meta_keyword'        => Str::slug($data['brand'], ','),
                 'product_category_id' => $cats[$data['category']]->id,
                 'description'         => '<p>' . $data['description'] . '</p>',
-                'main_img'            => 'assets/img/product/' . $data['img'],
+                'main_img'            => 'assets/img/product/566746376.jpg',
                 'other_img'           => null,
                 'product_code'        => $data['sku'],
                 'retail_price'        => $data['retail'],

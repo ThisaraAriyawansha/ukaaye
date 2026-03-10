@@ -99,7 +99,9 @@
 
 :root {
     --theme-colour: #FFC80B;
-    --common-colour: #009A4E;
+    --common-colour: #124179;
+    --primary-color: #124179;
+
 }
 
 body {

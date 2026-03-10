@@ -2,7 +2,7 @@
     <div class="container">
 
         @if(session('success'))
-            <div style="padding:12px 18px; background:var(--primary-color); border-left:4px solid var(--primary-color); border-radius:8px; font-family:'Mulish',sans-serif; font-size:14px; color:var(--primary-color); margin-bottom:28px;">
+            <div style="padding:12px 18px; background:#f0fdf4; border-left:4px solid var(--primary-color); border-radius:8px; font-family:'Mulish',sans-serif; font-size:14px; color:var(--primary-color); margin-bottom:28px;">
                 {{ session('success') }}
             </div>
         @endif
@@ -185,7 +185,7 @@
 .pd-gallery__main {
     border-radius: 16px;
     overflow: hidden;
-    background: #111111;
+    background: #f5f5f5;
     border: 1px solid var(--primary-color);
     height: 400px;
     display: flex;
@@ -214,7 +214,7 @@
     border: 2px solid transparent;
     transition: border-color .2s, opacity .2s;
     opacity: .5;
-    background-color: #1a1a1a;
+    background-color: #e8e8e8;
 }
 .pd-thumb:hover, .pd-thumb.active {
     border-color: var(--primary-color);
@@ -247,7 +247,7 @@
     font-weight: 800;
     line-height: 1.3;
     margin: 0;
-    color: #f0f0f0;
+    color: #111;
 }
 .pd-info__price { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .pd-price-sale {
@@ -290,7 +290,7 @@
     font-family: 'Mulish', sans-serif;
     font-size: 14px;
     line-height: 1.7;
-    color: #a0a0a0;
+    color: #444;
 }
 
 /* ── Form row ──────────────────────────────────── */
@@ -335,10 +335,10 @@
     font-family: 'Mulish', sans-serif;
     font-size: 12px;
     padding: 3px 12px;
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
     border-radius: 20px;
-    color: #a0a0a0;
+    color: #444;
     text-decoration: none;
     transition: background .2s, color .2s, border-color .2s;
 }
@@ -353,7 +353,7 @@
     font-family: 'Mulish', sans-serif;
     font-size: 20px;
     font-weight: 800;
-    color: #f0f0f0;
+    color: #111;
     padding-bottom: 12px;
     border-bottom: 2px solid var(--primary-color);
     margin-bottom: 20px;
@@ -361,28 +361,28 @@
 
 /* ── Description block ─────────────────────────── */
 .pd-full-desc {
-    background: #111111;
-    border: 1px solid var(--primary-color);
+    background: #fff;
+    border: 1px solid #e0e0e0;
     border-radius: 16px;
     padding: 32px;
 }
 .pd-desc-body {
     font-size: 15px;
     line-height: 1.8;
-    color: #a0a0a0;
+    color: #444;
 }
-.pd-desc-body p  { color: #a0a0a0; }
+.pd-desc-body p  { color: #444; }
 .pd-desc-body h1,
 .pd-desc-body h2,
 .pd-desc-body h3,
-.pd-desc-body h4 { color: #f0f0f0; }
+.pd-desc-body h4 { color: #111; }
 .pd-desc-body a  { color: var(--primary-color); }
-.pd-desc-body strong { color: #d0d0d0; }
+.pd-desc-body strong { color: #222; }
 
 /* ── Related Product Card ──────────────────────── */
 .product-card {
-    background: #111111;
-    border: 1px solid var(--primary-color);
+    background: #fff;
+    border: 1px solid #e0e0e0;
     border-radius: 16px;
     overflow: hidden;
     transition: box-shadow .25s, transform .25s, border-color .25s;
@@ -391,7 +391,7 @@
     flex-direction: column;
 }
 .product-card:hover {
-    box-shadow: 0 10px 36px rgba(0,0,0,.5);
+    box-shadow: 0 10px 36px rgba(0,0,0,.12);
     transform: translateY(-4px);
     border-color: var(--primary-color);
 }
@@ -399,7 +399,7 @@
     position: relative;
     height: 200px;
     overflow: hidden;
-    background: #1a1a1a;
+    background: #f5f5f5;
 }
 .product-card__img-wrap img {
     width: 100%;
@@ -435,7 +435,7 @@
     margin: 0;
 }
 .product-card__title-link {
-    color: #f0f0f0;
+    color: #111;
     text-decoration: none;
     transition: color .2s;
 }
@@ -483,7 +483,7 @@
     align-items: stretch;
     height: 48px;
     border-radius: 9px;
-    background: #1a1a1a;
+    background: #f0f0f0;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -492,7 +492,7 @@
     flex: 0 0 38px;
     width: 38px;
     height: 48px;
-    background: #1a1a1a;
+    background: #f0f0f0;
     border: none;
     font-size: 22px;
     color: var(--primary-color);
@@ -513,14 +513,14 @@
     min-width: 0;
     height: 48px;
     border: none;
-    border-left: 1.5px solid #2a3a2a;
-    border-right: 1.5px solid #2a3a2a;
+    border-left: 1.5px solid #ddd;
+    border-right: 1.5px solid #ddd;
     text-align: center;
     font-family: 'Mulish', sans-serif;
     font-size: 15px;
     font-weight: 700;
-    color: #f0f0f0;
-    background: #1a1a1a;
+    color: #111;
+    background: #f0f0f0;
     padding: 0 4px;
     outline: none;
     -moz-appearance: textfield;
