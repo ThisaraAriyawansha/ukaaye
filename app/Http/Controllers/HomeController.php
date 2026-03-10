@@ -21,7 +21,7 @@ class HomeController extends Controller
 
         $homeGalleries = Gallery::where('is_active', true)->take(5)->get();
 
-        $homeTestimonials = Testimonial::where('is_active', true)->take(4)->get();
+        $homeTestimonials = Testimonial::where('is_active', true)->take(8)->get();
 
         $homeServices = Service::where('is_public', true)->take(3)->get();
 

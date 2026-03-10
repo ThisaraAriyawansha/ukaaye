@@ -407,6 +407,8 @@
   }
   .nav-c-slider img {
     width: 90px;
+    height: 90px;
+    object-fit: cover;
   }
   .subscribe h3 {
     font-size: 26px;
@@ -784,6 +786,8 @@
   a.next-slide.nav-active img,
   .nav-c-slider img {
     width: 75px;
+    height: 75px;
+    object-fit: cover;
   }
   .pricing-plan-top {
     padding: 30px;
@@ -1506,6 +1510,8 @@
   }
   a.next-slide.nav-active img, .nav-c-slider img {
     width: 66px;
+    height: 66px;
+    object-fit: cover;
     margin: 2px;
   }
   .fun-facts img {
@@ -1628,6 +1634,8 @@
   }
   a.next-slide.nav-active img, .nav-c-slider img {
     width: 60px;
+    height: 60px;
+    object-fit: cover;
   }
   .hero-section-two .hero-text span {
     font-size: 14px;

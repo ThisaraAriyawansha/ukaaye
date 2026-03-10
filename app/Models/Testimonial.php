@@ -20,8 +20,10 @@ class Testimonial extends Model
             return asset('assets/images/thumbnails/564654.webp');
         }
 
-        if (str_starts_with($this->image_path, 'assets/')) {
-            return asset($this->image_path);
+        $normalized = str_replace('\\', '/', ltrim($this->image_path, '\\/'));
+
+        if (str_starts_with($normalized, 'assets/')) {
+            return asset($normalized);
         }
 
         return Storage::url($this->image_path);
