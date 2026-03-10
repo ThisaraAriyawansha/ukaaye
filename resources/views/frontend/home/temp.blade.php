@@ -14,49 +14,7 @@
 
             
 
-<section class="gap">
-  <div class="container">
-    <div class="heading">
-      <img src="assets/img/heading-img.png" alt="img">
-      <span>Welcome to Solar Power Save Energy</span>
-      <h2>We are the Best-In-Class Products & Solutions</h2>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="experience hover-img">
-          <h3>We have 35+ years of experience</h3>
-          <p>leading renewable energy solutions provider that is revolutionising and redefining the way sustainable energy sources are harnessed across the world. Present in 18 countries across Asia, Australia, Europe Africa and the Americas, Veztaz is powering.</p>
-          <figure>
-            <img src="https://placehold.co/680x370" alt="experience">
-          </figure>
-          <div class="director-renewable">
-            <img src="https://placehold.co/168x168" alt="img">
-            <div>
-              <h4>Alexa Roniks</h4>
-              <span>Director of Renewable Group</span>
-              <img src="assets/img/signature.png" alt="signature">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="experience-img">
-          <img src="https://placehold.co/666x747" alt="img">
-          <div class="count-style ">
-                <img src="assets/img/solar-panel.png" alt="solar-panel">
-              <h2 data-max="18000"><span>+</span></h2>
-              <p>Installed Capacity</p> 
-          </div>
-          <div class="count-style two">
-                <img src="assets/img/windmill.png" alt="windmill">
-              <h2 data-max="12500"><span>+</span></h2>
-              <p>Wtgs Installed</p> 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <section>
   <div class="container">
     <div class="heading">
