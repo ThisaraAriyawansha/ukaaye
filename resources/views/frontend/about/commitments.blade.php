@@ -404,7 +404,7 @@
 </section>
 
 <!-- ── CTA Banner Section ── -->
-<section class="cta-section">
+<section class="cta-section" style="display:none">
   <div class="cta-deco-1"></div>
   <div class="cta-deco-2"></div>
   <div class="cta-deco-3">

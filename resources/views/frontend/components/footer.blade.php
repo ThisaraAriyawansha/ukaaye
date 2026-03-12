@@ -1,29 +1,156 @@
+<style>
+  .cta-section {
+    background-color: var(--primary-color);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .cta-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .cta-text h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .cta-text span {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 12px;
+    opacity: 0.9;
+  }
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .cta-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--theme-colour);
+    color: #ffffff;
+    padding: 16px 36px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  .cta-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: 2px solid var(--theme-colour);
+    color: var(--theme-colour);
+    padding: 14px 30px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  .cta-btn-primary:hover,
+  .cta-btn-outline:hover {
+    opacity: 0.9;
+  }
+  @media (max-width: 767px) {
+    .cta-section {
+      padding: 50px 0;
+    }
+    .cta-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .cta-text h2 {
+      font-size: 24px;
+    }
+    .cta-buttons {
+      width: 100%;
+    }
+    .cta-btn-primary,
+    .cta-btn-outline {
+      width: 100%;
+      justify-content: center;
+      padding: 14px 20px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .cta-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+    }
+    .cta-text h2 {
+      font-size: 28px;
+    }
+    .cta-buttons {
+      width: 100%;
+    }
+  }
+</style>
+
 <footer style="background-image: url(assets/img/footer-line.png);">
-  <div class="container">
-    <div class="footer-top" style="color: white; background-color: var(--primary-color); padding: 40px 0;">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="logo">
-            <h2 style="color: white; font-family: 'Archivo', sans-serif; font-size: 50px;">
-              Ukaaye
-            </h2>
-            <p style="color: white;">
-              UKAAYE provides CAT, CCTV, fiber optic, and satellite connection services, delivering reliable connectivity and security solutions for homes and businesses.
-            </p>
+  <div class="footer-top">
+      <section class="cta-section">
+        {{-- Decorative elements --}}
+        <div style="position:absolute; top:-60px; left:-60px; width:250px; height:250px; border-radius:50%; background:rgba(255,255,255,0.08); pointer-events:none;"></div>
+        <div style="position:absolute; bottom:-80px; right:-40px; width:320px; height:320px; border-radius:50%; background:rgba(255,255,255,0.06); pointer-events:none;"></div>
+        <div style="position:absolute; top:50%; right:10%; transform:translateY(-50%); opacity:0.06; pointer-events:none;">
+          <svg width="200" height="200" viewBox="0 0 24 24" fill="#ffffff">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+
+        <div class="container">
+          <div class="cta-inner">
+
+            {{-- Left Text --}}
+            <div class="cta-text">
+              <span>Get Started Today</span>
+              <h2>Have a CATV, CCTV or Fiber Project?<br>Let's Build It Together.</h2>
+            </div>
+
+            {{-- Right Buttons --}}
+            <div class="cta-buttons">
+              <a href="{{ route('contactus') }}" class="cta-btn-primary">
+                Contact Us Now
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+
+              <a href="tel:+94777384992" class="cta-btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--theme-colour)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                Call Us Now
+              </a>
+            </div>
+
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="subscribe">
-            <h3 style="color: white;">Subscribe Newsletter</h3>
-            <p style="color: white;">Stay up to update with our latest news and products.</p>
-            <form role="form" class="get-subscribee" id="subscribe-form" method="post"> 
-              <input type="email" name="Email_Address" placeholder="Enter your email here" required="" style="color: #333;">
-              <button type="submit" class="btn bk" >Subscribe</button>
-            </form>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
+  <div class="container">
+    
     
     <div class="row">
       <div class="col-lg-4 col-md-6">
