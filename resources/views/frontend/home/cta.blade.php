@@ -1,6 +1,6 @@
 <section class="gap sustainable-section">
   <div class="container">
-    <div class="need-expert" style="background-image: url(assets/img/need-expert.jpg);">
+    <div class="need-expert" style="background-image: url(assets/img/blue_bg.png);">
       <div>
         <h4>Need Expert Advice? Get It Here for Free</h4>
         <div class="phone-number">

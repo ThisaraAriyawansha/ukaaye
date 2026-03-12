@@ -259,7 +259,8 @@ $(function() {
   scrollProgress.addEventListener("click", () => {
     document.documentElement.scrollTop = 0;
   });
-  scrollProgress.style.background = `conic-gradient(#009a4e ${scrollValue}%, #fff ${scrollValue}%)`;
+  let primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+  scrollProgress.style.background = `conic-gradient(${primaryColor} ${scrollValue}%, #fff ${scrollValue}%)`;
 };
 
 window.onscroll = calcScrollValue;
