@@ -1,48 +1,187 @@
-<section class="tf-section tf-galley">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="title-heading st-4">
-                    <div class="sub-heading clr-pri-3 f-mulish">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77" height="30" viewBox="0 0 77 30">
-                            <g>
-                              <image width="77" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAeCAYAAABpE5PpAAAEPklEQVRogd2Ze4hVVRTGf+pNHRtnegxqlonUMJYGY/pXWoFEJpVBTFRDaBbOVmxC/5GUUFJMqQh6MLUjfARBUVGEYi9rqFQU0UrQ8pXvMkcLmbJSZ2TdvlOHy73de+fOmXPv/eCwD+ewz9n7O2utb611enU2NZEGA4F+QFu6m2UF7/PeTe8M17cA48qesC4iHWk3AiOB70tiBzEgHWmfAr8CB8p+911EKmn1wGXAlyWzgxiQStpyjZ+V/c4LQCI0tQKYqPN8SDPia2Wl1wBXSH0D/AYcB3YD3wL7gY64N14IwqRNAi4CjuQgAv2Be3RMkksHOAOcBs6KvEqgT+h+m+LmWuAD4PeiYSNHhEm7S+P6/5l6FTAXeBSoFgGfAJ8D3wG7RFgY9iGuliKPByYA9wMPAu3A28CzwA9xEpEPwqTdprE1zfxLgSeBZrnje8BKWcz5LO8zi9unY62uDQIagNn6AI8AbwHzgYM9S0H+CIRgGDBc51+nPKVBFjQHWK34ZZbyUQ6EZcIvQAswGpgMbJfl2XueSHHnokNA2q0ajwF7dW7C8DrwjoL3GGAG8GM3bqJT5Fv18bDi4TK5+5XFTtp4jZs1mvt8oY2YW96smBUVOmXFo4B1wC0q5cb0PCXZEZAW1JlbFOw3KnDfASwtwA3zxc/A3RKGoUqyb+qhd+eM3hKDGzThkISgWtYVR5JrH2ieRKFSllcfwzoywki7Xm0gwyLgEiW5O2Lem1UnC4Aqxb1hsa7GuRqcszifJO260K0RwL1FQFgAE4VXgMFKhAfEuJYXgT9wLpFQ7AqwSBVB2B0sYz8FnIxnrTwO1Mn6jcBpPb4C5yxMTElmFt6fS2hBAZ7WkQ5nFPMOA3tUR34F7Ix4yeeAB5TLTQU2Aa9G/M5UPARcDLyMRKA9x4kVIrguVD0YjgIfqkpojUhpTyihtue/AGyT0kcP5/oqtqKEPElak9IKc8leoUUMUGFeJRWz43KlAoOUfAbjLB3m2quAJcDf3byhDaoWngPeBcaKzKgxRyLUjPdnCdWeB7tY85mQ1KggNxG5VqT2jYA0w/PK20ys3pfF/xnBe/6Bc1bmPSXvaQkuJ7JMy4YO1ZF2bI1s8f+hU0JQqyrmDdWs3R8SnBuqBkP/ZGfG+397gJn+RhUz2qVkFkvvE3HdW+A7NwT4WB60Hu83hG+XImnop8/t6uc1AmuUlBcO5+qk0KP1Ye5MfWah7hkndqqwX6Ma2RoKj0nJ84dzZkAzgWeUXhxIdn+8/yv1WZn+sJcSTIjelOWhfuBidaBz+RfRT+6+UNaFWlONeH883YRStrQAbfpPMVXdkQlqwf+kuGSu9o1+7nRoz4NF0ES5X5WedULkvRYO/KkoB0sLwxLw6WrLj8x9WrLxugJ4Ce+zJvvlRloYRpq10i1pt6aEJeIWqyxGmdVZzLKqohXvg+ZrdgAXAIwK6LO/4gPOAAAAAElFTkSuQmCC"/>
-                            </g>
-                        </svg>
-                        <span class="inner-sub st-1">Photo Gallery</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77" height="30" viewBox="0 0 77 30">
-                            <g>
-                              <image width="77" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAeCAYAAABpE5PpAAAEMUlEQVRoge2Ze4hVVRTGf46WMyWmZvkaNSWfST7I1EINyVQ0kSxsQiyS3JFo/lGhUQSCJokk5aONhijhHyGRkKTlI3JMFKQaBx2o1HS0klSs66ucGVl3vhOnw73XwblPnQ8OZ+acfc/e+zvr8a11mtXNmsUtDe8T79659sAVvP87eqvo1mYsJR4C9uca0ERaclQBfXFuSHREE2nJ4P0x4BzwdXREE2mp8S3QDucGhUc1kZYa23V3SXhUizxb5I3AXnxPYCDQG+gAtAk9x7Lfb8AvwA/AT0BtA+cJSBuDcyV4f4kCJu1OYAowERgLtA/dqwFiIus2oDVQErp/FtgGbNZxOeks3lfhXDVQCowDPqcASesDvA5MA1rJYvYA5TpbxjsO/Bv5nRHXD3gwbjX1RJcB53HuY+B9vK9OMucO4HlgUkBaocS07sBG4DAwU8TMBjoBo4A3gS1ywShhhr+AfcAakdURmCCLexU4gnPLcK5tgt9+o/PjwYV8J605MF9k2Wa/12YHAKuA0zf4XHPhrbLYXsB6YF58HuemRsaW69wd57qS56R1AXYC7wIWgF+QSrfN1qVtFu+P4v1LwOC4xcEmnFsbD/z1938GTmn0aPKYtMEqYcz1vgQekDWkj6wovK8ARgJv6QXtwrl7NWqfzo+Sp6Q9IlHZGVgKPAn8npWZva/B+0XA+HgJBd/hXGmoBjVLzzvSBsmyLDMuAN5Q/MkuvN8uq7tLieC45h+Acy0C0koiWicX6Kp41VrZcElOV+P9QckTE8rv6Gox0L9IWu0i8EEOl3iHNJCp+dUK/rlHPXFPAT1Ca+lnhF0FLENMllvEcrBYI2qIsuXcnJHl3N3xAr2+4ghQLUtbrP/7BhXBCmA5MB34KMtLfRmYAZwEntVLzDT6K2YNxLleCg3dIuVWMvQJ2t1Wo/0DnADu19/ZwMPAbiWkx1QKZQLN9fyp8qgujZhjTWBpVnrMAT6UMn4vC4TdExeScDvwWoYIs2e/Ld1VGrpeo2ripM4mXs8oNMVUdl1WrA9QF++SeP9r+MNKkSzMCBwKVGZgEwGK1XYxsfgZ8HSGhGsrJZVTittHJR/+/K89lOzDSgqEuxy1KhPKVfyOCJUP6YS5ygYRdlAdhEwp/Zg8KK2Iirs9aoV0UwegY4YIe0auMTlH2bpRSFQRTNSGrJOwVz2sdMBE4hfAc3KPJ4BjhUHT/5GItCuq/2xD9wEHgFcaWXKZRVWopjuiQvxQOjaQCyQjwoLlcIlNE3orgR/lVi0buM4idUh3q61sWugrYJj6YwWLVO3uP7RpS68L5a6fKh1vEaGVGndVJHVQ0T1CPfVOetZptak3FDJZAa73jaBWFcInykIvSvyW6bgeqqT91qmReFOgoR9WYtI7dph7mbo2NW8xz6zLXPaCLMpczz6VWYvHSLu5AFwD7u/9V73LPFIAAAAASUVORK5CYII="/>
-                            </g>
-                        </svg>
-                    </div>
-                    <h2 class="title clr-pri-2">Explore Our Case Studies & Recent Photo Gallery</h2>
-                </div>
+<section class="gap" style="background-color:#ffffff;">
+  <div class="container">
+
+    {{-- Heading --}}
+    <div class="heading" style="text-align:center; margin-bottom:50px;">
+      <img src="{{ asset('assets/img/heading-img.png') }}" alt="img">
+      <span>Our Gallery</span>
+      <h2>Explore Our Work</h2>
+    </div>
+
+    {{-- Filter Buttons --}}
+    @php
+      $categoryNames = $galleries->pluck('category_name')->filter()->unique()->values();
+    @endphp
+
+    @if($categoryNames->count())
+    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:40px;">
+      <button onclick="filterGallery('all')" id="btn-all"
+        style="padding:8px 22px; border:2px solid var(--common-colour); background:var(--common-colour); color:#fff; font-size:14px; font-weight:600; cursor:pointer; transition:all 0.3s;">
+        All
+      </button>
+      @foreach($categoryNames as $cat)
+      <button onclick="filterGallery('{{ Str::slug($cat) }}')" id="btn-{{ Str::slug($cat) }}"
+        style="padding:8px 22px; border:2px solid var(--common-colour); background:transparent; color:var(--common-colour); font-size:14px; font-weight:600; cursor:pointer; transition:all 0.3s;">
+        {{ $cat }}
+      </button>
+      @endforeach
+    </div>
+    @endif
+
+    {{-- Gallery Grid --}}
+    <div class="row" id="gallery-grid">
+      @forelse($galleries as $gallery)
+      <div class="col-lg-4 col-md-6 gallery-item"
+           data-category="{{ Str::slug($gallery->category_name) }}"
+           style="margin-bottom:24px; transition:all 0.3s;">
+        <div style="position:relative; overflow:hidden; height:280px; cursor:pointer;"
+             onclick="openLightbox('{{ $gallery->image_url }}', '{{ $gallery->name }}')">
+
+          {{-- Image --}}
+          <img src="{{ $gallery->image_url }}" alt="{{ $gallery->name }}"
+            style="width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;"
+            onmouseover="this.style.transform='scale(1.08)'"
+            onmouseout="this.style.transform='scale(1)'">
+
+          {{-- Overlay --}}
+          <div style="
+            position:absolute;
+            inset:0;
+            background:rgba(18,65,121,0.65);
+            opacity:0;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            gap:8px;
+            transition:opacity 0.3s ease;
+          "
+          onmouseover="this.style.opacity='1'"
+          onmouseout="this.style.opacity='0'">
+
+            <div style="width:44px; height:44px; border:2px solid var(--theme-colour); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--theme-colour)" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
             </div>
 
-            @forelse($galleries as $gallery)
-                @php
-                    $colClass = $loop->index < 3 ? 'col-xl-4 col-lg-4 col-md-4 col-12' : 'col-xl-6 col-lg-6 col-md-6 col-12';
-                    $mgClass  = ($loop->index === 3) ? 'mg-bt' : (($loop->last && $loop->index >= 3) ? 'mgbt-0' : '');
-                    $active   = $loop->first ? 'active' : '';
-                @endphp
-                <div class="{{ $colClass }}">
-                    <div class="sc-gallery {{ $mgClass }} wow fadeIn animated" data-wow-delay="0.3ms" data-wow-duration="1200ms">
-                        <div class="box-feature {{ $active }}">
-                            <img src="{{ $gallery->image_url }}" alt="{{ $gallery->name }}">
-                            <div class="overlay"></div>
-                            <div class="box-content">
-                                <h5 class="title"><div  class="clr-pri-2">{{ $gallery->name }}</div></h5>
-                                <p class="f-rubik">{{ $gallery->category_name }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            @empty
-                <div class="col-12">
-                    <p class="text-center">No gallery items found.</p>
-                </div>
-            @endforelse
+            @if($gallery->name)
+            <span style="color:#fff; font-size:14px; font-weight:600; text-align:center; padding:0 16px;">
+              {{ $gallery->name }}
+            </span>
+            @endif
+
+            @if($gallery->category_name)
+            <span style="color:var(--theme-colour); font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:1px;">
+              {{ $gallery->category_name }}
+            </span>
+            @endif
+
+          </div>
         </div>
+      </div>
+      @empty
+      <div class="col-12">
+        <p style="text-align:center; color:#aaa; padding:60px 0;">No gallery items found.</p>
+      </div>
+      @endforelse
     </div>
+
+  </div>
 </section>
+
+{{-- Lightbox --}}
+<div id="lightbox" onclick="closeLightbox()"
+  style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0); z-index:9999; align-items:center; justify-content:center; padding:20px; transition:background 0.3s ease;">
+  <div id="lightbox-inner"
+       onclick="event.stopPropagation()"
+       style="position:relative; max-width:900px; width:100%; transform:scale(0.85); opacity:0; transition:transform 0.35s ease, opacity 0.35s ease;">
+
+    {{-- Close Button --}}
+    <button onclick="closeLightbox()"
+      style="position:absolute; top:-44px; right:0; background:none; border:none; color:#fff; font-size:30px; cursor:pointer; line-height:1;">
+      ✕
+    </button>
+
+    {{-- Top accent bar --}}
+    <div style="height:4px; background:var(--theme-colour); width:100%; margin-bottom:0;"></div>
+
+    <img id="lightbox-img" src="" alt=""
+      style="width:100%; max-height:80vh; object-fit:contain; display:block; background:#111;">
+
+    {{-- Caption bar --}}
+    <div style="background:var(--common-colour); padding:12px 20px; display:flex; justify-content:space-between; align-items:center;">
+      <span id="lightbox-caption" style="color:#fff; font-size:15px; font-weight:600;"></span>
+      <span id="lightbox-category" style="color:var(--theme-colour); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px;"></span>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function openLightbox(src, caption) {
+    const lb    = document.getElementById('lightbox');
+    const inner = document.getElementById('lightbox-inner');
+    const img   = document.getElementById('lightbox-img');
+
+    img.src = '';
+    document.getElementById('lightbox-caption').textContent = caption;
+
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        lb.style.background    = 'rgba(0,0,0,0.92)';
+        inner.style.opacity    = '1';
+        inner.style.transform  = 'scale(1)';
+      });
+    });
+
+    img.src = src;
+  }
+
+  function closeLightbox() {
+    const lb    = document.getElementById('lightbox');
+    const inner = document.getElementById('lightbox-inner');
+
+    lb.style.background   = 'rgba(0,0,0,0)';
+    inner.style.opacity   = '0';
+    inner.style.transform = 'scale(0.85)';
+
+    setTimeout(() => {
+      lb.style.display          = 'none';
+      document.body.style.overflow = '';
+      inner.style.transform     = 'scale(0.85)';
+      inner.style.opacity       = '0';
+    }, 350);
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  function filterGallery(category) {
+    const items   = document.querySelectorAll('.gallery-item');
+    const buttons = document.querySelectorAll('[id^="btn-"]');
+
+    buttons.forEach(btn => {
+      btn.style.background = 'transparent';
+      btn.style.color      = 'var(--common-colour)';
+      btn.style.border     = '2px solid var(--common-colour)';
+    });
+
+    const activeBtn = document.getElementById('btn-' + category);
+    if (activeBtn) {
+      activeBtn.style.background = 'var(--common-colour)';
+      activeBtn.style.color      = '#fff';
+    }
+
+    items.forEach(item => {
+      item.style.display = (category === 'all' || item.dataset.category === category)
+        ? 'block'
+        : 'none';
+    });
+  }
+</script>

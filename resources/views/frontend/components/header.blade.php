@@ -71,6 +71,7 @@
                         <ul class="sub-menu">
                             <li><a href="{{ route('testimonials') }}">Testimonials</a></li>
                             <li><a href="{{ route('faq') }}">FAQs</a></li>
+                            <li><a href="{{ route('gallery') }}">Gallery</a></li>
                         </ul>
                     </li>
                     <li class="navbar-dropdown">
