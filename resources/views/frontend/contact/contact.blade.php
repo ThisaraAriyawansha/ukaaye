@@ -1,57 +1,343 @@
-<section class="tf-section tf-contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="title-heading">
-                                <div class="sub-heading clr-pri-3 f-mulish">
-                                    <span class="inner-sub">Contact Us</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77" height="30" viewBox="0 0 77 30">
-                                        <g>
-                                          <image width="77" height="30" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAeCAYAAABpE5PpAAAEMUlEQVRoge2Ze4hVVRTGf46WMyWmZvkaNSWfST7I1EINyVQ0kSxsQiyS3JFo/lGhUQSCJokk5aONhijhHyGRkKTlI3JMFKQaBx2o1HS0klSs66ucGVl3vhOnw73XwblPnQ8OZ+acfc/e+zvr8a11mtXNmsUtDe8T79659sAVvP87eqvo1mYsJR4C9ica0ERaclQBfXFuSHREE2nJ4P0x4BzwdXREE2mp8S3QDucGhUc1kZYa23V3SXhUizxb5I3AXnxPYCDQG+gAtAk9x7Lfb8AvwA/AT0BtA+cJSBuDcyV4f4kCJu1OYAowERgLtA/dqwFiIus2oDVQErp/FtgGbNZxOeks3lfhXDVQCowDPqcASesDvA5MA1rJYvYA5TpbxjsO/Bv5nRHXD3gwbjX1RJcB53HuY+B9vK9OMucO4HlgUkBaocS07sBG4DAwU8TMBjoBo4A3gS1ywShhhr+AfcAakdURmCCLexU4gnPLcK5tgt9+o/PjwYV8J605MF9k2Wa/12YHAKuA0zf4XHPhrbLYXsB6YF58HuemRsaW69wd57qS56R1AXYC7wIWgF+QSrfN1qVtFu+P4v1LwOC4xcEmnFsbD/z1938GTmn0aPKYtMEqYcz1vgQekDWkj6wovK8ARgJv6QXtwrl7NWqfzo+Sp6Q9IlHZGVgKPAn8npWZva/B+0XA+HgJBd/hXGmoBjVLzzvSBsmyLDMuAN5Q/MkuvN8uq7tLieC45h+Acy0C0koiWicX6Kp41VrZcElOV+P9QckTE8rv6Gox0L9IWu0i8EEOl3iHNJCp+dUK/rlHPXFPAT1Ca+lnhF0FLENMllvEcrBYI2qIsuXcnJHl3N3xAr2+4ghQLUtbrP/7BhXBCmA5MB34KMtLfRmYAZwEntVLzDT6K2YNxLleCg3dIuVWMvQJ2t1Wo/0DnADu19/ZwMPAbiWkx1QKZQLN9fyp8qgujZhjTWBpVnrMAT6UMn4vC4TdExeScDvwWoYIs2e/Ld1VGrpeo2ripM4mXs8oNMVUdl1WrA9QF++SeP9r+MNKkSzMCBwKVGZgEwGK1XYxsfgZ8HSGhGsrJZVTittHJR/+/K89lOzDSgqEuxy1KhPKVfyOCJUP6YS5ygYRdlAdhEwp/Zg8KK2Iits9aoV0UwegY4YIe0auMTlH2bpRSFQRTNSGrJOwVz2sdMBE4hfAc3KPJ4BjhUHT/5GItCuq/2xD9wEHgFcaWXKZRVWopjuiQvxQOjaQCyQjwoLlcIlNE3orgR/lVi0buM4idUh3q61sWugrYJj6YwWLVO3uP7RpS68L5a6fKh1vEaGVGndVJHVQ0T1CPfVOetZptak3FDJZAa73jaBWFcInykIvSvyW6bgeqqT91qmReFOgoR9WYtI7dph7mbo2NW8xz6zLXPaCLMpczz6VWYvHSLu5AFwD7u/9V73LPFIAAAAASUVORK5CYII="/>
-                                        </g>
-                                    </svg>
-                                </div>
-                                <h2 class="title clr-pri-2 m-b26">We'd Love To Hear From You </h2>
-                        <p class="f-mulish">Questions about our products? Need feeding advice? Reach out to our team – we're here for Sri Lankan parents.</p>
-                            </div>
-                            <div class="wrap-contact">
-                                <div class="fx adress">
-                                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="65" viewBox="0 0 43 65">
-                                        <image id="location" width="43" height="65" xlink:href="data:img/png;base64,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"/>
-                                      </svg>
-                                    </div>
-                                    <div class="content">
-                                        <p>Address</p>
-                                        <h4>Piliyandala, Sri Lanka</h4>
-                                    </div>
-                                </div>
-                                <div class="fx Email">
-                                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="51" viewBox="0 0 60 51">
-                                        <image id="chat_1_" data-name="chat (1)" width="60" height="51" xlink:href="data:img/png;base64,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"/>
-                                      </svg>                                      
-                                    </div>
-                                    <div class="content">
-                                        <p>Email Address</p>
-                                        <h4>info@aromat.lk</h4>
-                                    </div>
-                                </div>
-                                <div class="fx phone">
-                                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
-                                        <image id="phone-call" width="60" height="60" xlink:href="data:img/png;base64,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"/>
-                                      </svg>                                      
-                                    </div>
-                                    <div class="content">
-                                        <p>Hotline</p>
-                                        <h4>+94 76 544 5356</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-7">
-                            <div class="image text-right p-t12 wow fadeIn animated" data-wow-delay="0.3ms" data-wow-duration="1200ms">
-                                <img src="assets/images/contact/image-contact.png" alt="">
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-            </section>
+<style>
+  .inputbox.select-box {
+    background: #fff;
+    border: 1px solid #7a8187;
+    padding: 0;
+    position: relative;
+  }
+
+  .inputbox.select-box select {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: inherit;
+    color: #999;
+    cursor: pointer;
+    padding: 15px 20px;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .inputbox.select-box select.selected {
+    color: #333;
+  }
+
+  .inputbox.select-box::after {
+    content: '▾';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #999;
+    font-size: 16px;
+  }
+
+  /* ── Custom Toast ── */
+  #custom-toast {
+    position: fixed;
+    z-index: 9999;
+    background: #fff;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+
+    /* Desktop: top-right */
+    top: 30px;
+    right: 30px;
+    left: auto;
+    bottom: auto;
+    min-width: 320px;
+    max-width: 420px;
+    width: auto;
+    transform: translateX(80px);
+  }
+
+  #custom-toast.show {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+  }
+
+  /* Mobile: full-width bottom bar */
+  @media (max-width: 575px) {
+    #custom-toast {
+      top: auto;
+      bottom: 20px;
+      right: 16px;
+      left: 16px;
+      min-width: unset;
+      max-width: unset;
+      width: calc(100% - 32px);
+      border-radius: 10px;
+      transform: translateY(100px);
+    }
+
+    #custom-toast.show {
+      transform: translateY(0);
+    }
+  }
+
+  /* Tablet: slightly smaller than desktop */
+  @media (min-width: 576px) and (max-width: 991px) {
+    #custom-toast {
+      top: 20px;
+      right: 20px;
+      min-width: 280px;
+      max-width: 360px;
+    }
+  }
+
+  #custom-toast .toast-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  #custom-toast .toast-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  #custom-toast .toast-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #custom-toast .toast-msg {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
+  #custom-toast .toast-close {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #aaa;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: color 0.2s;
+    align-self: flex-start;
+  }
+
+  #custom-toast .toast-close:hover {
+    color: var(--primary-color);
+  }
+
+  #custom-toast .toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: var(--primary-color);
+    transform-origin: left;
+    opacity: 0.5;
+  }
+
+  @keyframes toast-shrink {
+    from { transform: scaleX(1); }
+    to   { transform: scaleX(0); }
+  }
+</style>
+
+<!-- Custom Toast -->
+<div id="custom-toast">
+  <div class="toast-icon">✓</div>
+  <div class="toast-body">
+    <div class="toast-title" id="toast-title"></div>
+    <div class="toast-msg"   id="toast-msg"></div>
+  </div>
+  <button class="toast-close" onclick="hideToast()">✕</button>
+  <div class="toast-progress" id="toast-progress"></div>
+</div>
+
+<section class="gap content-page">
+  <div class="container">
+    <div class="heading">
+      <img src="assets/img/heading-img.png" alt="img">
+      <span>Sri Lanka's Trusted Supplier for CATV, CCTV & Fiber Optic Solutions</span>
+      <h2>We'd Love to Hear From You!</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-8">
+        <form class="content-form" id="contact-form" method="post" action="{{ route('contact.store') }}">
+          @csrf
+          <h4>Let's Get in Touch – Send Your Enquiry</h4>
+
+          <div class="inputbox">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <div class="error-text text-danger small" id="error-name"></div>
+          </div>
+
+          <div class="inputbox">
+            <input type="tel" name="number" placeholder="Phone / WhatsApp Number" required>
+            <div class="error-text text-danger small" id="error-number"></div>
+          </div>
+
+          <div class="inputbox">
+            <input type="email" name="mail" placeholder="Email Address" required>
+            <div class="error-text text-danger small" id="error-mail"></div>
+          </div>
+
+          <div class="inputbox select-box">
+            <select name="subject" required>
+              <option value="" disabled selected>Type of Requirement</option>
+              <option value="CATV & Satellite Distribution">CATV & Satellite Distribution</option>
+              <option value="CCTV & Security">CCTV & Security</option>
+              <option value="Fiber Optics & Data">Fiber Optics & Data</option>
+              <option value="Other">Other</option>
+            </select>
+            <div class="error-text text-danger small" id="error-subject"></div>
+          </div>
+
+          <div class="textareabox">
+            <textarea name="messagewr2" placeholder="Message / Project Details"></textarea>
+            <div class="error-text text-danger small" id="error-messagewr2"></div>
+          </div>
+
+          <button type="submit" class="btn bk" id="submit-btn">Submit Enquiry Now</button>
+        </form>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="content-page-info">
+          <div class="d-flex align-items-center"><h3>Phone / WhatsApp:</h3><i class="flaticon-iphone"></i></div>
+          <h5>Sri Lanka - <a href="tel:+94777384992">+94 777 38 4992</a></h5>
+        </div>
+
+        <div class="content-page-info">
+          <div class="d-flex align-items-center"><h3>Location:</h3>
+            <i><svg width="35" height="35" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.4997 9.77051C15.0331 9.77051 13.0264 11.7773 13.0264 14.2438C13.0264 16.7104 15.0331 18.7171 17.4997 18.7171C19.9663 18.7171 21.973 16.7104 21.973 14.2438C21.973 11.7773 19.9662 9.77051 17.4997 9.77051Z" fill="black"/>
+                <path d="M27.9679 4.33576C25.172 1.53979 21.4545 0 17.5005 0C13.5464 0 9.82899 1.53979 7.03309 4.33576C4.23706 7.1318 2.69727 10.8492 2.69727 14.8032C2.69727 22.8021 10.2605 29.4552 14.3238 33.0295C14.8884 33.5262 15.376 33.9551 15.7644 34.3178C16.2512 34.7727 16.8757 35 17.5004 35C18.1251 35 18.7498 34.7726 19.2365 34.318C19.625 33.9551 20.1125 33.5262 20.6771 33.0295C24.7404 29.4552 32.3036 22.8022 32.3036 14.8032C32.3036 10.8492 30.7638 7.1318 27.9679 4.33576ZM17.5005 20.7674C13.9033 20.7674 10.977 17.841 10.977 14.2438C10.977 10.6467 13.9033 7.7203 17.5005 7.7203C21.0976 7.7203 24.024 10.6467 24.024 14.2438C24.024 17.841 21.0976 20.7674 17.5005 20.7674Z" fill="black"/>
+            </svg></i>
+          </div>
+          <h5>216A, Sea Beach Road,<br>Colombo 11, Sri Lanka</h5>
+        </div>
+
+        <div class="content-page-info">
+          <div class="d-flex align-items-center"><h3>Email:</h3>
+            <i><svg width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.45801 18.2397C0.853946 18.2397 0.364258 18.7295 0.364258 19.3335C0.364258 19.9375 0.853946 20.4272 1.45801 20.4272H5.83301C6.43706 20.4272 6.92676 19.9375 6.92676 19.3335C6.92676 18.7295 6.43706 18.2397 5.83301 18.2397H1.45801Z" fill="black"/>
+              <path d="M1.45801 22.6147C0.853946 22.6147 0.364258 23.1045 0.364258 23.7085C0.364258 24.3125 0.853946 24.8022 1.45801 24.8022H10.208C10.8121 24.8022 11.3018 24.3125 11.3018 23.7085C11.3018 23.1045 10.8121 22.6147 10.208 22.6147H1.45801Z" fill="black"/>
+              <path d="M4.53374 3.42302L4.375 3.29167C4.82475 2.67265 5.30337 2.21733 5.92239 1.76758C7.83912 0.375 10.5733 0.375 16.0417 0.375H18.9583C24.4266 0.375 27.1609 0.375 29.0776 1.76758C29.6966 2.21733 30.1375 2.62276 30.5872 3.24178L30.4041 3.42394L27.0384 6.78964C24.5859 9.24206 22.8228 11.0019 21.302 12.1623C19.8065 13.3033 18.6747 13.7609 17.4999 13.7609C16.3249 13.7609 15.1931 13.3033 13.6976 12.1623C12.1768 11.0019 10.4137 9.24206 7.96123 6.78964L5.12731 3.95572L4.53374 3.42302Z" fill="black"/>
+              <path d="M2.91602 13.5C2.91602 9.65013 2.91602 7.15547 3.40196 5.34716L3.62163 5.54431L6.47295 8.39561C8.85334 10.776 10.7188 12.6415 12.37 13.9013C14.0601 15.1908 15.6537 15.9484 17.4992 15.9484C19.3446 15.9484 20.9382 15.1908 22.6283 13.9013C24.2794 12.6415 26.1449 10.776 28.5254 8.39564L31.5918 5.3291C32.0827 7.13885 32.0827 9.63731 32.0827 13.5C32.0827 18.9683 32.0827 21.7026 30.6901 23.6192C30.2404 24.2383 29.696 24.7827 29.0769 25.2324C27.1602 26.625 24.426 26.625 18.9577 26.625H16.041C13.958 26.625 12.2717 26.625 10.8762 26.548C12.1648 26.2458 13.1243 25.0891 13.1243 23.7083C13.1243 22.0975 11.8185 20.7917 10.2077 20.7917H8.35916C8.60732 20.3626 8.74935 19.8646 8.74935 19.3333C8.74935 17.7225 7.44351 16.4167 5.83268 16.4167H2.92653C2.91602 15.5401 2.91602 14.5726 2.91602 13.5Z" fill="black"/>
+            </svg></i>
+          </div>
+          <h5><a href="mailto:info@ukaaye.com">info@ukaaye.com</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="mapouter">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126800!2d79.8612!3d6.9271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a81c7%3A0x2c7b0c3c0f3b0f0a!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1720000000000"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<script>
+  let toastTimer = null;
+
+  function hideToast() {
+    document.getElementById('custom-toast').classList.remove('show');
+    clearTimeout(toastTimer);
+  }
+
+  function openToast(title, message, duration = 4000) {
+    const toast    = document.getElementById('custom-toast');
+    const progress = document.getElementById('toast-progress');
+
+    document.getElementById('toast-title').textContent = title;
+    document.getElementById('toast-msg').textContent   = message;
+
+    progress.style.animation = 'none';
+    progress.offsetHeight;
+    progress.style.animation = `toast-shrink ${duration}ms linear forwards`;
+
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => hideToast(), duration);
+  }
+
+  // Select color toggle
+  document.querySelector('select[name="subject"]').addEventListener('change', function () {
+    this.classList.toggle('selected', this.value !== '');
+  });
+
+  // ── Attach BEFORE the theme's JS runs ──
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    e.stopImmediatePropagation(); // 👈 blocks the theme's own submit handler
+
+    const form      = this;
+    const submitBtn = document.getElementById('submit-btn');
+
+    document.querySelectorAll('.error-text').forEach(el => el.textContent = '');
+
+    submitBtn.disabled    = true;
+    submitBtn.textContent = 'Sending...';
+
+    fetch(form.action, {
+      method:  'POST',
+      headers: {
+        'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
+        'Accept':       'application/json',
+      },
+      body: new FormData(form)
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        openToast('Message Sent!', data.message);
+        form.reset();
+        form.querySelector('select[name="subject"]').classList.remove('selected');
+      } else {
+        if (data.errors) {
+          Object.entries(data.errors).forEach(([field, messages]) => {
+            const errEl = document.getElementById('error-' + field);
+            if (errEl) errEl.textContent = messages[0];
+          });
+        }
+        openToast('Oops!', data.message || 'Please correct the errors and try again.');
+      }
+    })
+    .catch(() => {
+      openToast('Oops!', 'Network error. Please try again.');
+    })
+    .finally(() => {
+      submitBtn.disabled    = false;
+      submitBtn.textContent = 'Submit Enquiry Now';
+    });
+
+  }, true); // 👈 useCapture:true — fires before any other listener on the form
+</script>

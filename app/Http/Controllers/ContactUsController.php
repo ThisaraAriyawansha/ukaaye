@@ -40,8 +40,6 @@ class ContactUsController extends Controller
             'ip_address'  => $request->ip(),
         ]);
 
-        // Optional: send email notification
-        // Mail::to('admin@aromat.lk')->send(new NewContactMessage($request->all()));
 
         return response()->json([
             'success' => true,
