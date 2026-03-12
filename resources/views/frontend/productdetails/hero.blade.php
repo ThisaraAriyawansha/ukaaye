@@ -1,4 +1,4 @@
-<section style="background-image: url(assets/img/home/img-post-antennas.jpg);" class="bannr">
+<section style="background-image: url(assets/img/hero/asnTr.jpg);" class="bannr">
   <div class="container">
     <div class="bannr-text">
       <h2>{{ $product->title }}</h2>

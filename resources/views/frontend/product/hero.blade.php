@@ -1,4 +1,4 @@
-<section style="background-image: url(assets/img/home/photo-1526666923127-b2970f64b422.jpg);" class="bannr">
+<section style="background-image: url(assets/img/hero/MmZIw.jpg);" class="bannr">
   <div class="container">
     <div class="bannr-text">
       <h2>Our Produts</h2>
