@@ -5,7 +5,7 @@
         <div class="col-lg-6">
           <div class="logo">
             <h2 style="color: white; font-family: 'Archivo', sans-serif; font-size: 50px;">
-              UKAAYE
+              Ukaaye
             </h2>
             <p style="color: white;">
               UKAAYE provides CAT, CCTV, fiber optic, and satellite connection services, delivering reliable connectivity and security solutions for homes and businesses.
@@ -18,7 +18,7 @@
             <p style="color: white;">Stay up to update with our latest news and products.</p>
             <form role="form" class="get-subscribee" id="subscribe-form" method="post"> 
               <input type="email" name="Email_Address" placeholder="Enter your email here" required="" style="color: #333;">
-              <button type="submit" class="btn bk" style="background-color: white; color: var(--primary-color); border: none;">Subscribe</button>
+              <button type="submit" class="btn bk" >Subscribe</button>
             </form>
           </div>
         </div>

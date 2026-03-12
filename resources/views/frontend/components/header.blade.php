@@ -61,38 +61,20 @@
                             <li><a href="{{ route('cart') }}">Cart</a></li>
                         </ul>
                     </li>
-                    <li class="navbar-dropdown menu-item-children">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li class="sub-menu-item-children"><a href="#">project</a>
-                                <ul class="sub-menu">
-                                  <li><a href="our-project.html">our project</a></li>
-                                  <li><a href="our-project-2.html">our project 2</a></li>
-                                  <li><a href="project-details.html">project details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="our-history.html">our history</a></li>
-                            <li><a href="pricing-plans.html">pricing plans</a></li>
-                            <li><a href="faq.html">faq</a></li>
-                            <li><a href="404.html">404</a></li>
-                        </ul>
+
+                    <li class="navbar-dropdown">
+                        <a href="{{ route('blog') }}">Blog</a>
                     </li>
+                    
                     <li class="navbar-dropdown menu-item-children">
-                        <a href="#">Services</a>
-                        <ul class="sub-menu">
-                            <li><a href="our-services.html">our services</a></li>
-                            <li><a href="service-details.html">service details</a></li>
-                        </ul>
-                    </li>
-                    <li class="navbar-dropdown menu-item-children">
-                        <a href="#">News</a>
+                        <a href="#">More</a>
                         <ul class="sub-menu">
                             <li><a href="our-blog.html">our blog</a></li>
                             <li><a href="blog-details.html">blog details</a></li>
                         </ul>
                     </li>
                     <li class="navbar-dropdown">
-                        <a href="contact.html">Contact</a>
+                        <a href="{{ route('contactus') }}">Contact</a>
                     </li>
                 </ul>
             </nav>
