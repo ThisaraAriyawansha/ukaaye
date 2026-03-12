@@ -124,8 +124,7 @@
             {{-- Left Text --}}
             <div class="cta-text">
               <span>Get Started Today</span>
-              <h2>Have a CATV, CCTV or Fiber Project?<br>Let's Build It Together.</h2>
-            </div>
+              <h2>Looking for CATV, CCTV or Fiber Products?<br>We Provide Quality Solutions.</h2>            </div>
 
             {{-- Right Buttons --}}
             <div class="cta-buttons">
