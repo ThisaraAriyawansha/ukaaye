@@ -1,25 +1,30 @@
 <footer style="background-image: url(assets/img/footer-line.png);">
   <div class="container">
-    <div class="footer-top">
+    <div class="footer-top" style="color: white; background-color: var(--primary-color); padding: 40px 0;">
       <div class="row">
         <div class="col-lg-6">
           <div class="logo">
-            <img src="assets/img/logo.png" alt="logo">
-            <p>Solar energy is radiant light and heat from the Sun that is harnessed using a range of technologies such as solar power to generate electricity, solar thermal energy, and solar architecture.</p>
+            <h2 style="color: white; font-family: 'Archivo', sans-serif; font-size: 50px;">
+              UKAAYE
+            </h2>
+            <p style="color: white;">
+              UKAAYE provides CAT, CCTV, fiber optic, and satellite connection services, delivering reliable connectivity and security solutions for homes and businesses.
+            </p>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="subscribe">
-            <h3>Subscribe Newsletter</h3>
-            <p>Stay up to update with our latest news and products.</p>
+            <h3 style="color: white;">Subscribe Newsletter</h3>
+            <p style="color: white;">Stay up to update with our latest news and products.</p>
             <form role="form" class="get-subscribee" id="subscribe-form" method="post"> 
-              <input type="email" name="Email_Address" placeholder="Enter your email here" required="">
-              <button type="submit" class="btn bk">Subscribe</button>
+              <input type="email" name="Email_Address" placeholder="Enter your email here" required="" style="color: #333;">
+              <button type="submit" class="btn bk" style="background-color: white; color: var(--primary-color); border: none;">Subscribe</button>
             </form>
           </div>
         </div>
       </div>
     </div>
+    
     <div class="row">
       <div class="col-lg-4 col-md-6">
         <div class="widget-title">
@@ -35,7 +40,7 @@
             </i></div>
             <div>
               <span>Phone No:</span> 
-              <h6><a href="callto:+1(251)3441354">+1 0109 -1812-347</a></h6>
+              <h6><a href="callto:+94777384992">+94777384992</a></h6>
             </div>
           </div>
           <div class="get-in-touch">
@@ -51,7 +56,7 @@
             </i></div>
             <div>
               <span>Email Address:</span> 
-              <h6><a href="mailto:username@domain.com">username@domain.com</a></h6>
+              <h6><a href="mailto:info@ukaaye.com">info@ukaaye.com</a></h6>
             </div>
           </div>
           <div class="get-in-touch">
@@ -64,71 +69,76 @@
               </svg>
             </i></div>
             <div>
-              <span class="pt-2 pb-0">12/7 new town, 245x Town 1214 Street, United State</span>
+              <span class="pt-2 pb-0">No. 12/7, Galle Road, Colombo 03, Sri Lanka</span>
             </div>
           </div>
         </div>
       </div>
+      
       <div class="col-lg-4 col-md-6">
         <div class="widget-title">
           <h3>Useful Links</h3>
           <div class="boder"></div>
           <ul>
-            <li><i class="fa-solid fa-caret-right"></i><a href="about.html">About Us</a></li>
-            <li><i class="fa-solid fa-caret-right"></i><a href="#">Timeline </a></li>
-            <li><i class="fa-solid fa-caret-right"></i><a href="#">Image Gallery </a></li>
-            <li><i class="fa-solid fa-caret-right"></i><a href="contact.html">Contact Us</a></li>
-            <li><i class="fa-solid fa-caret-right"></i><a href="faq.html">Faq’s</a></li>
-            <li><i class="fa-solid fa-caret-right"></i><a href="#">Quality Management</a></li>
-            <li><i class="fa-solid fa-caret-right"></i><a href="#">Health & Safety </a></li>
-            <li><i class="fa-solid fa-caret-right"></i><a href="#">Environmental</a></li>
-            <li><i class="fa-solid fa-caret-right"></i><a href="#">Environmental</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="{{ route('home') }}">Home </a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="{{ route('about') }}">About Us</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="{{ route('gallery') }}">Image Gallery </a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="{{ route('contactus') }}">Contact Us</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="{{ route('faq') }}">Faq’s</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="{{ route('services') }}">Services</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="{{ route('products') }}">Products</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="{{ route('testimonials') }}">Testimonials</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="{{ route('blog') }}">News</a></li>
+            <li><i class="fa-solid fa-caret-right"></i><a href="{{ route('cart') }}">Cart</a></li>
           </ul>
         </div>
       </div>
+      
       <div class="col-lg-4 col-md-6">
         <div class="widget-title mb-0">
           <h3>Recent News</h3>
           <div class="boder"></div>
           <ul class="recent-news mb-0">
+            @forelse($footerRecentBlogs as $blog)
+            <li class="{{ $loop->last ? 'pb-0' : '' }}">
+              <figure>
+                  <img src="{{ $blog->image ? asset('storage/' . $blog->image) : 'assets/img/blog/544356456.png' }}" 
+                      alt="{{ $blog->title }}" 
+                      style="width:130px; height:110px; object-fit:cover;">
+              </figure>
+              <div>
+                <span>{{ $blog->published_at ? $blog->published_at->format('M d, Y') : $blog->created_at->format('M d, Y') }}</span>
+                <a href="{{ url($blog->slug) }}">{{ Str::limit($blog->title, 40) }}</a>
+              </div>
+            </li>
+            @empty
             <li>
-              <figure>
-                <img src="https://placehold.co/130x110" alt="img">
-              </figure>
-              <div>
-                <span>Dec 20, 2024</span>
-                <a href="#">2021 Batterman Award honorsBrad Burkhart</a>
-              </div>
+              <p>No recent news available</p>
             </li>
-            <li class="pb-0">
-              <figure>
-                <img src="https://placehold.co/130x110" alt="img">
-              </figure>
-              <div>
-                <span>Dec 20, 2024</span>
-                <a href="#">2021 Batterman Award honorsBrad Burkhart</a>
-              </div>
-            </li>
+            @endforelse
           </ul>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-        <div class="footer-bottom-text">
-          <h6><b>Ⓒ  Copyright Boltx 2023</b>. All Right Reserved.</h6>
-          <ul>
-            <li>
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#"> Terms & Conditions</a>
-            </li>
-            <li>
-              <a href="about.html">About Us</a>
-            </li>
-          </ul>
-        </div>
-    </div>
+    
+<div class="footer-bottom" style="border-top: 1px solid #333; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+  <div>
+    <h6 style="color: #fff; margin: 0 0 4px 0; font-size: 14px;">
+      <b>Ⓒ Copyright UKAAYE {{ date('Y') }}</b>. All Right Reserved.
+    </h6>
+    <p style="margin: 0; font-size: 13px; color: #aaa;">
+      Designed & Developed by
+      <a href="https://creatxsoftware.com/" target="_blank" style="color: #BFC9D1; font-weight: 600; text-decoration: none;">
+        Creatx Software
+      </a>
+    </p>
+  </div>
+  <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 24px;">
+    <li><a href="#" style="color: #ccc; text-decoration: none; font-size: 14px;">Privacy Policy</a></li>
+    <li><a href="#" style="color: #ccc; text-decoration: none; font-size: 14px;">Terms & Conditions</a></li>
+    <li><a href="{{ route('about') }}" style="color: #ccc; text-decoration: none; font-size: 14px;">About Us</a></li>
+  </ul>
+</div>
   </div>
   <img src="assets/img/footer-icon.png" alt="footer-icon" class="footer-icon">
-</footer> 
+</footer>

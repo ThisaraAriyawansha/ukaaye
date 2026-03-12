@@ -18,7 +18,7 @@
                   </svg>
               </i>
               <span>Send Email: </span>
-              <a class="me-3" href="mailto:info@example.com">info@example.com</a>
+              <a class="me-3" href="mailto:info@ukaaye.com">info@ukaaye.com</a>
             </div>
           </div>
         </div>
