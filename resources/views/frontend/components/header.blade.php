@@ -35,7 +35,7 @@
         <div class="bottom-bar-text">
             <div class="logo" style="display:flex;align-items:center;gap:12px;">
                 <a href="{{ route('home') }}" style="display:flex;align-items:center;text-decoration:none;">
-                    <img src="assets/img/logo/logo_bg_remove.png" 
+                    <img src="assets/img/logo/main_img_3.webp" 
                         alt="Ukaaye" 
                         style="max-height:70px;width:auto;height:auto;vertical-align:middle;">
                     <span style="display:none; font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:#ffffff;letter-spacing:1px;line-height:1;">

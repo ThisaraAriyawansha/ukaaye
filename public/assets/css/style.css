@@ -4451,7 +4451,7 @@ button.error-button:hover {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(../img/logo/logo_bg_remove.png);
+    background-image: url(../img/logo/main_logo.webp);
     content: "";
 }
 /* transition */

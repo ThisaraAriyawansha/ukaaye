@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ukaaye - Home</title>
-  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="icon" href="assets/img/logo/logo_bg_remove.webp">
   <!-- CSS only -->
    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
    <!-- fancybox -->
@@ -28,9 +28,9 @@
 
  </head>
 <body>
-<div class="preloader">
-  <div id="loader"></div>
-</div> 
+    <div class="preloader">
+    <div id="loader"></div>
+    </div> 
 
             <!-- header begin -->
             @include('frontend.components.header')
