@@ -89,7 +89,7 @@
                     @php $cartCount = count(session('cart', [])); @endphp
                     <span id="cart-count-badge" style="position:absolute; top:-5px; right:-5px; min-width:18px; height:18px; background:#fff; color:var(--primary-color); border:2px solid var(--primary-color); border-radius:20px; font-family:'Mulish',sans-serif; font-size:10px; font-weight:800; display:{{ $cartCount > 0 ? 'flex' : 'none' }}; align-items:center; justify-content:center; padding:0 4px; line-height:1;">{{ $cartCount }}</span>
                 </a>
-                <a href="#" class="btn">Request a Quote</a>
+                <a href="{{ route('contactus') }}" class="btn">Request a Quote</a>
             </div>
       </div>
     </div>
