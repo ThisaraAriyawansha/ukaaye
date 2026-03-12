@@ -99,7 +99,6 @@ class RouteController extends Controller
             ]);
         }
 
-        // If not found, show 404
         abort(404, "Page not found");
     }
 }
