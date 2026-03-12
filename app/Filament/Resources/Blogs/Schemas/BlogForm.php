@@ -111,7 +111,6 @@ class BlogForm
 
                 Section::make('SEO')
                     ->icon('heroicon-o-magnifying-glass')
-                    ->collapsed()
                     ->components([
                         Forms\Components\TextInput::make('meta_title')
                             ->maxLength(255)
